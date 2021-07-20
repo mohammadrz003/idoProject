@@ -1,0 +1,33 @@
+.bull-header::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    bottom: 3px;
+    left: 0;
+    background-color: #FDED8B;
+    z-index: -1;
+}
+
+/* .landing-container {
+    min-height: calc(100vh - 112px);
+} */
+
+.spin-animate {
+    animation-name: spin-circle-text;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spin-circle-text {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.orient-text {
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+    transform: rotate(180deg);
+}
+
