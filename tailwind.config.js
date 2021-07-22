@@ -14,10 +14,14 @@ module.exports = {
           100: "#747476",
           200: "#19161d",
           300: "#151318",
+          // footer
+          400: "#10182f",
+          500: "#a1add1"
         },
         /* white */
         light: {
-          100: "#E6E7E8",
+          100: "#FAFAFA",
+          200: "#E6E7E8"
         },
       },
       fontFamily: {
@@ -25,6 +29,9 @@ module.exports = {
       },
       gridTemplateColumns: {
         13: 'repeat(13, minmax(0, 1fr))',
+      },
+      maxWidth: {
+        xxs: '17rem',
       },
     },
   },

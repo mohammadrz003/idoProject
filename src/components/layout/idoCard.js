@@ -10,7 +10,7 @@ const IdoCard = () => {
   let idoCartItem = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   return (
-    <div className="container mx-auto lg:p-20 flex flex-col">
+    <div className="container mx-auto lg:px-20 lg:py-28 flex flex-col">
       <div className="text-center">
         <h2
           className={`leading-none relative inline-block text-center font-bold text-secondery-300 text-3xl ${CardStyle.poolTitle}`}
@@ -18,12 +18,12 @@ const IdoCard = () => {
           Featured Pools
         </h2>
       </div>
-      <section className="mt-10 grid grid-cols-3 gap-11">
+      <section className="mt-12 grid grid-cols-3 gap-11">
         {/* card items go here */}
         {idoCartItem.map((item) => {
           return (
             <div
-              className={`${CardStyle.idoCartItem} rounded-3xl p-6 cursor-pointer border hover:border-primary-300`}
+              className={`${CardStyle.idoCartItem} transform hover:scale-105 duration-300 rounded-3xl p-6 cursor-pointer border hover:border-primary-300`}
             >
               <div className="flex justify-between items-center">
                 <img
@@ -51,7 +51,7 @@ const IdoCard = () => {
                 <span
                   style={{ width: `${progress}%` }}
                   className="absolute top-0 left-0 h-full inline-block bg-yellow-400"
-                ></span>
+                />
               </div>
               <div className="flex justify-between">
                 <span className="font-medium text-sm">{progress}%</span>
@@ -59,7 +59,7 @@ const IdoCard = () => {
                   {sale} / {total}
                 </span>
               </div>
-              <div className="flex justify-between mt-4 pt-4 border-t border-gray-300">
+              <div className="flex flex-wrap justify-between mt-4 pt-4 border-t border-gray-300">
                 <p className="flex flex-col">
                   <span className="font-medium text-sm">Participants</span>
                   <span className="font-semibold text-base">71</span>
