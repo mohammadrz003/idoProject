@@ -1,0 +1,57 @@
+.timelineBox::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  top: 0;
+  left: -1px;
+  background-color: #fafafa;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+.timelineBox::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  top: 0;
+  left: -7px;
+  background-color: #fafafa;
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ping {
+  75%,
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+
+.timelineBox:first-child::before {
+  width: 14px;
+  height: 14px;
+  top: 0;
+  left: -1px;
+  background-color: #ffe000;
+}
+
+.timelineBox:first-child::after {
+  width: 14px;
+  height: 14px;
+  top: 0;
+  left: -8px;
+  background-color: #ffe000;
+  animation: pingtwo 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes pingtwo {
+  75%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}

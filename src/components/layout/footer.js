@@ -1,7 +1,11 @@
 import React from "react";
 import footerLogo from "../../img/bull-logo.png";
+import { useState } from 'react';
+import { Switch } from '@headlessui/react';
 
 const Footer = () => {
+  const [enabled, setEnabled] = useState(false)
+
   return (
     <section className="bg-secondery-400">
       <footer className="container mx-auto flex flex-col px-2 xl:px-20 py-12 lg:px-10 md:px-5 text-secondery-500 text-center">
@@ -12,13 +16,35 @@ const Footer = () => {
           </h3>
         </div>
         <ul className="flex justify-center mt-12 space-x-4 sm:space-x-12 text-sm font-medium">
-          <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Security</a></li>
-          <li><a href="#">Sitemap</a></li>
+          <li>
+            <a href="#">Terms of Service</a>
+          </li>
+          <li>
+            <a href="#">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#">Security</a>
+          </li>
+          <li>
+            <a href="#">Sitemap</a>
+          </li>
         </ul>
-        <div className="flex flex-col-reverse space-y-reverse space-y-7 md:grid md:grid-cols-3 mt-12">
-          <span className="inline-block text-sm text-center md:text-left">English</span>
+        <div className="flex flex-col-reverse items-center space-y-reverse space-y-7 md:items-baseline md:grid md:grid-cols-3 mt-12">
+          <Switch
+            checked={enabled}
+            onChange={setEnabled}
+            className={`${
+              enabled ? "bg-blue-600" : "bg-gray-500"
+            } relative inline-flex items-center h-6 rounded-full w-11`}
+          >
+            <span className="sr-only">Enable notifications</span>
+            <span
+              className={`${
+                enabled ? "translate-x-6" : "translate-x-1"
+              } inline-block w-4 h-4 transform bg-white rounded-full`}
+            />
+          </Switch>
+          {/* <span className="inline-block text-sm text-center md:text-left">English</span> */}
           <div className="flex justify-center space-x-10">
             {/* twitter */}
             <svg

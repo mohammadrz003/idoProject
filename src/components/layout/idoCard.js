@@ -10,7 +10,7 @@ const IdoCard = () => {
   let idoCartItem = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   return (
-    <div className="container mx-auto xl:px-20 md:px-7 py-28 flex flex-col">
+    <div className="container mx-auto py-24 xl:px-20 md:px-7 lg:py-28 flex flex-col">
       <div className="text-center">
         <h2
           className={`leading-none relative inline-block text-center font-bold text-secondery-300 text-3xl ${CardStyle.poolTitle}`}
