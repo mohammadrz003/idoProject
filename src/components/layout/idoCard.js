@@ -10,7 +10,7 @@ const IdoCard = () => {
   let idoCartItem = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   return (
-    <div className="container mx-auto lg:px-20 lg:py-28 flex flex-col">
+    <div className="container mx-auto xl:px-20 md:px-7 py-28 flex flex-col">
       <div className="text-center">
         <h2
           className={`leading-none relative inline-block text-center font-bold text-secondery-300 text-3xl ${CardStyle.poolTitle}`}
@@ -18,12 +18,12 @@ const IdoCard = () => {
           Featured Pools
         </h2>
       </div>
-      <section className="mt-12 grid grid-cols-3 gap-11">
+      <section className="mt-14 grid px-4 gap-y-8 lg:grid-cols-3 lg:gap-11 md:grid-cols-2 md:gap-9 sm:grid-cols-1 sm:gap-y-12 sm:px-6">
         {/* card items go here */}
         {idoCartItem.map((item) => {
           return (
             <div
-              className={`${CardStyle.idoCartItem} transform hover:scale-105 duration-300 rounded-3xl p-6 cursor-pointer border hover:border-primary-300`}
+              className={`${CardStyle.idoCartItem} transform lg:hover:scale-105 duration-300 rounded-3xl p-6 cursor-pointer border hover:border-primary-300`}
             >
               <div className="flex justify-between items-center">
                 <img

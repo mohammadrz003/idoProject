@@ -8,6 +8,7 @@ module.exports = {
         primary: {
           100: "#FDED8B",
           300:"#ffe000",
+          400: "#fdc500"
         },
         /* black */
         secondery: {
@@ -31,7 +32,8 @@ module.exports = {
         13: 'repeat(13, minmax(0, 1fr))',
       },
       maxWidth: {
-        xxs: '17rem',
+        xsm: '15rem',
+        xxs: '17rem'
       },
     },
   },

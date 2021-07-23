@@ -6,15 +6,17 @@ import Roadmap from "./components/layout/roadmap";
 import IdoCard from "./components/layout/idoCard";
 import Feature from "./components/layout/feature";
 import Footer from "./components/layout/footer";
+import Example from "./components/tailwindlanding";
 
 
 function App() {
   return (
     <div>
-      <Header/>
+      <Example/>
+      {/* <Header/> */}
 
       <main>
-        <Landing/>
+        {/* <Landing/> */}
         <Roadmap/>
         <IdoCard/>
         <Feature/>

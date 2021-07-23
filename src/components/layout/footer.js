@@ -4,21 +4,21 @@ import footerLogo from "../../img/bull-logo.png";
 const Footer = () => {
   return (
     <section className="bg-secondery-400">
-      <footer className="container mx-auto flex flex-col lg:px-20 py-12 text-secondery-500 text-center">
+      <footer className="container mx-auto flex flex-col px-2 xl:px-20 py-12 lg:px-10 md:px-5 text-secondery-500 text-center">
         <div className="flex justify-center items-center space-x-2">
           <img className="w-12" src={footerLogo} alt="" />
           <h3 className="font-montserrat font-semibold text-base">
             LORM LAUNCHPAD
           </h3>
         </div>
-        <ul className="flex justify-center mt-12 space-x-12 text-sm font-medium">
-          <li>Terms of Service</li>
-          <li>Privacy Policy</li>
-          <li>Security</li>
-          <li>Sitemap</li>
+        <ul className="flex justify-center mt-12 space-x-4 sm:space-x-12 text-sm font-medium">
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">Sitemap</a></li>
         </ul>
-        <div className="grid grid-cols-3 mt-12">
-          <span className="inline-block text-sm text-left">English</span>
+        <div className="flex flex-col-reverse space-y-reverse space-y-7 md:grid md:grid-cols-3 mt-12">
+          <span className="inline-block text-sm text-center md:text-left">English</span>
           <div className="flex justify-center space-x-10">
             {/* twitter */}
             <svg
@@ -80,7 +80,7 @@ const Footer = () => {
               <path d="M3.1 10.75c5 0 9.814 -.38 15.314 -5" />
             </svg>
           </div>
-          <span className="inline-block text-sm text-right">
+          <span className="inline-block text-sm text-center md:text-right">
             © 2021 bull-platform. All rights reserved
           </span>
         </div>
