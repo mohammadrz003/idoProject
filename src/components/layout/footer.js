@@ -1,10 +1,10 @@
 import React from "react";
 import footerLogo from "../../img/bull-logo.png";
-import { useState } from 'react';
-import { Switch } from '@headlessui/react';
+import { useState } from "react";
+import { Switch } from "@headlessui/react";
 
 const Footer = () => {
-  const [enabled, setEnabled] = useState(false)
+  const [enabled, setEnabled] = useState(false);
 
   return (
     <section className="bg-secondery-400">
@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="flex justify-center items-center space-x-2">
           <img className="w-12" src={footerLogo} alt="" />
           <h3 className="font-montserrat font-semibold text-base">
-            LORM LAUNCHPAD
+            BULL LAUNCHPAD
           </h3>
         </div>
         <ul className="flex justify-center mt-12 space-x-4 sm:space-x-12 text-sm font-medium">
@@ -30,20 +30,36 @@ const Footer = () => {
           </li>
         </ul>
         <div className="flex flex-col-reverse items-center space-y-reverse space-y-7 md:items-baseline md:grid md:grid-cols-3 mt-12">
-          <Switch
-            checked={enabled}
-            onChange={setEnabled}
-            className={`${
-              enabled ? "bg-blue-600" : "bg-gray-500"
-            } relative inline-flex items-center h-6 rounded-full w-11`}
-          >
-            <span className="sr-only">Enable notifications</span>
-            <span
+          <div className="flex items-center space-x-2.5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="icon icon-tabler icon-tabler-moon w-7 h-7"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#a1add1"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+            </svg>
+            {/* <p className="font-medium">Dark Mode</p> */}
+            <Switch
+              checked={enabled}
+              onChange={setEnabled}
               className={`${
-                enabled ? "translate-x-6" : "translate-x-1"
-              } inline-block w-4 h-4 transform bg-white rounded-full`}
-            />
-          </Switch>
+                enabled ? "bg-blue-600" : "bg-gray-500"
+              } relative inline-flex items-center h-6 rounded-full w-11`}
+            >
+              <span className="sr-only">Enable notifications</span>
+              <span
+                className={`${
+                  enabled ? "translate-x-6" : "translate-x-1"
+                } inline-block w-4 h-4 transform bg-white rounded-full`}
+              />
+            </Switch>
+          </div>
           {/* <span className="inline-block text-sm text-center md:text-left">English</span> */}
           <div className="flex justify-center space-x-10">
             {/* twitter */}
