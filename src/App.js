@@ -1,26 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
 import Roadmap from "./components/layout/roadmap";
 import MobileRoadmap from "./components/layout/mobileRoadmap";
 import IdoCard from "./components/layout/idoCard";
 import Feature from "./components/layout/feature";
 import Footer from "./components/layout/footer";
-import Example from "./components/layout/landingSection";
-
+import LandingSection from "./components/layout/landingSection";
+import { useDarkMode } from "./components/layout/useDarkMode";
 
 function App() {
+  const [theme, toggleTheme] = useDarkMode();
+
   return (
-    <div>
-      <Example/>
-      {/* <Header/> */}
+    <div className={`${theme}`}>
+      {/* <Landing/> */}
+      <LandingSection darkMode={theme} />
 
       <main>
-        {/* <Landing/> */}
-        <MobileRoadmap/>
-        <Roadmap/>
-        <IdoCard/>
-        <Feature/>
-        <Footer/>
+        <MobileRoadmap />
+        <Roadmap />
+        <IdoCard />
+        <Feature darkMode={theme} />
+        <Footer darkMode={theme} setDark={toggleTheme} />
       </main>
     </div>
   );
