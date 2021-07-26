@@ -21,7 +21,7 @@ const navigation = [
   { name: "Company", href: "#" },
 ];
 
-export default function Example() {
+export default function LandingSection() {
   let [isOpen, setIsOpen] = useState(false);
   function closeModal() {
     setIsOpen(false);

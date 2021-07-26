@@ -1,6 +1,6 @@
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
@@ -24,6 +24,14 @@ module.exports = {
           100: "#FAFAFA",
           200: "#E6E7E8"
         },
+        darkMode: {
+          100: '#E5E5E5',
+          200: '#848484',
+          300: '#FFD369',
+          400: '#202020',
+          500: '#393E46',
+          600: '#121212'
+        }
       },
       fontFamily: {
         montserrat: "'Montserrat', sans-serif",
