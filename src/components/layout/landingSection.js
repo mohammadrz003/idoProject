@@ -283,7 +283,7 @@ const LandingSection = ({darkMode}) => {
                       <div className="flex items-center justify-between w-full md:w-auto">
                         <a href="#">
                           <span className="sr-only">Workflow</span>
-                          <img className="h-8 w-auto sm:h-10" src={darkMode ? logoImgDark : logoImg} />
+                          <img className="h-8 w-auto sm:h-10" src={darkMode === "dark" ? logoImgDark : logoImg} />
                         </a>
                         <div className="-mr-2 flex items-center md:hidden space-x-4">
                           <button
@@ -346,7 +346,7 @@ const LandingSection = ({darkMode}) => {
                     <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden dark:bg-darkMode-500">
                       <div className="px-5 pt-4 flex items-center justify-between">
                         <div>
-                          <img className="h-8 w-auto" src={darkMode ? logoImgDark : logoImg} alt="" />
+                          <img className="h-8 w-auto" src={darkMode === "dark" ? logoImgDark : logoImg} alt="" />
                         </div>
                         <div className="-mr-2">
                           <Popover.Button className="bg-white dark:bg-darkMode-700 rounded-md p-2 inline-flex items-center justify-center text-gray-400 dark:text-darkMode-100 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">

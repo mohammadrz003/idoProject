@@ -3,9 +3,10 @@ import footerLogo from "../../img/bull-logo.png";
 import { useState } from "react";
 import { Switch } from "@headlessui/react";
 
-const Footer = ({darkMode, setDark}) => {
-
-  const [enabled, setEnabled] = useState(false);
+const Footer = ({ darkMode, setDark }) => {
+  const getLocalMode = window.localStorage.getItem("theme");
+  console.log(getLocalMode)
+  const [enabled, setEnabled] = useState(getLocalMode === 'dark' ? true : false);
 
   return (
     <section className="bg-secondery-400">
@@ -46,7 +47,7 @@ const Footer = ({darkMode, setDark}) => {
               <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
             </svg>
             {/* <p className="font-medium">Dark Mode</p> */}
-            <div onClick={darkMode ? ()=> setDark(false) : ()=> setDark(true)}>
+            <div onClick={setDark}>
               <Switch
                 checked={enabled}
                 onChange={setEnabled}
