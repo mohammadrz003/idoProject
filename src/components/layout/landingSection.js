@@ -53,7 +53,7 @@ export default function LandingSection() {
   };
 
   return (
-    <div className="relative bg-white overflow-hidden">
+    <div className="relative bg-white dark:bg-darkMode-400 overflow-hidden">
       {/* opean wallet modal */}
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog
@@ -258,9 +258,9 @@ export default function LandingSection() {
       </Transition>
 
       <div className="max-w-7xl mx-auto">
-        <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+        <div className="relative z-10 pb-8 bg-white dark:bg-darkMode-400 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
           <svg
-            className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
+            className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white dark:text-darkMode-400 transform translate-x-1/2"
             fill="currentColor"
             viewBox="0 0 100 100"
             preserveAspectRatio="none"
@@ -286,13 +286,13 @@ export default function LandingSection() {
                         <div className="-mr-2 flex items-center md:hidden space-x-4">
                           <button
                             onClick={openModal}
-                            className={`${landingCSS.mobileConnectBtn} font-medium leading-none px-4 py-2 rounded-md`}
+                            className={`${landingCSS.mobileConnectBtn} dark:text-primary-400 font-medium leading-none px-4 py-2 rounded-md`}
                           >
                             Connect
                           </button>
-                          <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                          <Popover.Button className="bg-white dark:bg-darkMode-500 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                             <span className="sr-only">Open main menu</span>
-                            <MenuIcon className="h-6 w-6" aria-hidden="true" />
+                            <MenuIcon className="h-6 w-6 dark:text-white dark:text-opacity-90" aria-hidden="true" />
                           </Popover.Button>
                         </div>
                       </div>
@@ -303,7 +303,7 @@ export default function LandingSection() {
                         <a
                           key={item.name}
                           href={item.href}
-                          className="font-medium text-gray-500 hover:text-gray-900"
+                          className="font-medium text-gray-500 dark:text-white dark:text-opacity-80 hover:text-gray-900"
                         >
                           {item.name}
                         </a>
@@ -312,13 +312,13 @@ export default function LandingSection() {
 
                       <a
                         onClick={showModal}
-                        className="cursor-pointer font-medium text-indigo-600 hover:text-indigo-500"
+                        className="cursor-pointer font-medium text-indigo-600 dark:text-indigo-200 hover:text-indigo-500"
                       >
                         Accounts
                       </a>
                       <a
                         onClick={openModal}
-                        className="cursor-pointer text-white font-medium bg-indigo-500 rounded-md leading-none px-4 py-2"
+                        className="cursor-pointer text-white font-medium bg-indigo-500 dark:bg-indigo-400 rounded-md leading-none px-4 py-2"
                       >
                         Connect
                       </a>
@@ -381,12 +381,12 @@ export default function LandingSection() {
           <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <div className="sm:text-center lg:text-left">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                <span className="block xl:inline">Best launchpad for</span>{" "}
+                <span className="block xl:inline dark:text-white dark:text-opacity-95">Best launchpad for</span>{" "}
                 <span className="block text-primary-400 xl:inline">
                   online business
                 </span>
               </h1>
-              <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+              <p className="mt-3 text-base text-gray-500 dark:text-white dark:text-opacity-75 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua
                 Egestas purus viverra
@@ -395,7 +395,7 @@ export default function LandingSection() {
                 <div className="rounded-md shadow" onClick={commingSoon}>
                   <a
                     href="#"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary-400 bg-secondery-300 dark:bg-darkMode-300 dark:text-secondery-300 md:py-4 md:text-lg md:px-10"
                   >
                     Apply project
                   </a>
@@ -403,7 +403,7 @@ export default function LandingSection() {
                 <div className="mt-3 sm:mt-0 sm:ml-3" onClick={warningNotif}>
                   <a
                     href="#"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-secondery-300 bg-primary-400 dark:bg-darkMode-500 dark:text-white dark:text-opacity-90 md:py-4 md:text-lg md:px-10"
                   >
                     View all pools
                   </a>
