@@ -3,7 +3,7 @@ import roadmapCSS from "../style/roadmap.module.css";
 
 const Roadmap = () => {
   return (
-    <div className="bg-secondery-400 hidden sm:block">
+    <div className="bg-secondery-400 dark:bg-darkMode-800 hidden sm:block">
       <div className="flex items-center container xl:px-10 mx-auto h-48">
         <ul className={`${roadmapCSS.timeLineUL} flex flex-col sm:flex-row sm:justify-around w-full`}>
           <li className="w-4/5 sm:w-1/5">

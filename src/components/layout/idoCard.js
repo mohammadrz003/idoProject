@@ -24,7 +24,7 @@ const IdoCard = () => {
           {idoCartItem.map((item) => {
             return (
               <div
-                className={`transform lg:hover:scale-105 duration-300 rounded-3xl p-6 cursor-pointer border border-gray-300 dark:border-gray-700 dark:hover:border-yellow-300 hover:border-primary-300`}
+                className={`transform lg:hover:scale-105 duration-300 rounded-3xl p-6 cursor-pointer border border-gray-300 dark:bg-darkMode-900 dark:border-gray-700 dark:hover:border-yellow-300 hover:border-primary-300`}
               >
                 <div className="flex justify-between items-center">
                   <img

@@ -6,22 +6,22 @@ import IdoCard from "./components/layout/idoCard";
 import Feature from "./components/layout/feature";
 import Footer from "./components/layout/footer";
 import LandingSection from "./components/layout/landingSection";
-import { useDarkMode } from "./components/layout/useDarkMode";
+import { useDarkModes } from "./components/layout/useDarkMode";
 
 function App() {
-  const [theme, toggleTheme] = useDarkMode();
+  const [useDarkMode, toggleTheme] = useDarkModes();
 
   return (
-    <div className={`${theme}`}>
+    <div className={`${useDarkMode}`}>
       {/* <Landing/> */}
-      <LandingSection darkMode={theme} />
+      <LandingSection darkMode={useDarkMode} />
 
       <main>
         <MobileRoadmap />
         <Roadmap />
         <IdoCard />
-        <Feature darkMode={theme} />
-        <Footer darkMode={theme} setDark={toggleTheme} />
+        <Feature darkMode={useDarkMode} />
+        <Footer darkMode={useDarkMode} setDark={toggleTheme} />
       </main>
     </div>
   );
