@@ -1,5 +1,5 @@
 import React from "react";
-import mobileRoadCSS from '../style/mobileRoadmap.module.css';
+import mobileRoadCSS from '../../components/style/mobileRoadmap.module.css';
 
 const MobileRoadmap = () => {
   return (
