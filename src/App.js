@@ -19,8 +19,9 @@ function App() {
         <div className={`${useDarkMode}`}>
             <BrowserRouter>
                 <Route path={'/pools'} component={() => <AllPoolsLayout/>}/>
-                <Route exact path={'/'} component={() => <HomeLayout useDarkMode={useDarkMode} toggleTheme={toggleTheme}/>}/>
+                <Route exact path={'/'} component={() => <HomeLayout useDarkMode={useDarkMode}/>}/>
             </BrowserRouter>
+            <Footer setDark={toggleTheme}/>
         </div>
     );
 }

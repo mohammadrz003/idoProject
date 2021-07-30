@@ -16,7 +16,6 @@ const HomeLayout = ({useDarkMode, toggleTheme}) => {
                 <Roadmap/>
                 <IdoCard/>
                 <Feature darkMode={useDarkMode}/>
-                <Footer darkMode={useDarkMode} setDark={toggleTheme}/>
             </main>
         </>
     );
