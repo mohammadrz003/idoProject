@@ -35,6 +35,9 @@ module.exports = {
           700: '#1D1D1D',
           800: '#292c36',
           900: '#272a34',
+        },
+        orange: {
+          500: '#DB483B'
         }
       },
       fontFamily: {
@@ -45,8 +48,12 @@ module.exports = {
       },
       maxWidth: {
         xsm: '15rem',
-        xxs: '17rem'
+        xxs: '17rem',
+        xxxl: '70rem',
       },
+      minWidth: {
+        xxl: '1400px',
+      }
     },
   },
   variants: {
