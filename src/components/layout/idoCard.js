@@ -1,5 +1,6 @@
 import React from "react";
 import CardStyle from "../style/cardStyle.module.css";
+import ProgressBar from "./progressBar";
 
 const IdoCard = () => {
   let progress = "70";
@@ -54,12 +55,10 @@ const IdoCard = () => {
                 <p className="mt-4 mb-1 font-semibold text-sm dark:text-white dark:text-opacity-80">
                   Progress
                 </p>
-                <div className="w-full h-3.5 rounded-md bg-gray-200 dark:bg-gray-700 relative overflow-hidden">
-                  <span
-                    style={{ width: `${progress}%` }}
-                    className="absolute top-0 left-0 h-full inline-block bg-yellow-400"
-                  />
-                </div>
+
+                {/*progress line*/}
+                <ProgressBar progress={progress}/>
+
                 <div className="flex justify-between">
                   <span className="font-medium text-sm dark:text-white dark:text-opacity-80">
                     {progress}%
@@ -101,6 +100,6 @@ const IdoCard = () => {
       </div>
     </div>
   );
-};
+}
 
 export default IdoCard;

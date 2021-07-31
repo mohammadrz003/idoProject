@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Tab } from "@headlessui/react";
+import ProgressBar from "../../components/layout/progressBar";
+import { Link } from "react-router-dom";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -12,6 +14,7 @@ export default function PoolsList() {
         id: 1,
         title: "Dotmoovs BNB",
         img: "image/coins/dotmoovs.jpg",
+        progress: "75",
         date: "5h ago",
         commentCount: 5,
         shareCount: 2,
@@ -20,6 +23,61 @@ export default function PoolsList() {
         id: 2,
         title: "Royale Finance",
         img: "image/coins/realfevr.jpg",
+        progress: "65",
+        date: "2h ago",
+        commentCount: 3,
+        shareCount: 2,
+      },
+      {
+        id: 1,
+        title: "Dotmoovs BNB",
+        img: "image/coins/dotmoovs.jpg",
+        progress: "75",
+        date: "5h ago",
+        commentCount: 5,
+        shareCount: 2,
+      },
+      {
+        id: 2,
+        title: "Royale Finance",
+        img: "image/coins/realfevr.jpg",
+        progress: "65",
+        date: "2h ago",
+        commentCount: 3,
+        shareCount: 2,
+      },
+      {
+        id: 1,
+        title: "Dotmoovs BNB",
+        img: "image/coins/dotmoovs.jpg",
+        progress: "75",
+        date: "5h ago",
+        commentCount: 5,
+        shareCount: 2,
+      },
+      {
+        id: 2,
+        title: "Royale Finance",
+        img: "image/coins/realfevr.jpg",
+        progress: "65",
+        date: "2h ago",
+        commentCount: 3,
+        shareCount: 2,
+      },
+      {
+        id: 1,
+        title: "Dotmoovs BNB",
+        img: "image/coins/dotmoovs.jpg",
+        progress: "75",
+        date: "5h ago",
+        commentCount: 5,
+        shareCount: 2,
+      },
+      {
+        id: 2,
+        title: "Royale Finance",
+        img: "image/coins/realfevr.jpg",
+        progress: "65",
         date: "2h ago",
         commentCount: 3,
         shareCount: 2,
@@ -29,6 +87,7 @@ export default function PoolsList() {
       {
         id: 1,
         title: "Is tech making coffee better or worse?",
+        progress: "65",
         date: "Jan 7",
         commentCount: 29,
         shareCount: 16,
@@ -36,6 +95,7 @@ export default function PoolsList() {
       {
         id: 2,
         title: "The most innovative things happening in coffee",
+        progress: "65",
         date: "Mar 19",
         commentCount: 24,
         shareCount: 12,
@@ -45,6 +105,7 @@ export default function PoolsList() {
       {
         id: 1,
         title: "Ask Me Anything: 10 answers to your questions about coffee",
+        progress: "65",
         date: "2d ago",
         commentCount: 9,
         shareCount: 5,
@@ -52,6 +113,7 @@ export default function PoolsList() {
       {
         id: 2,
         title: "The worst advice we've ever heard about coffee",
+        progress: "65",
         date: "4d ago",
         commentCount: 1,
         shareCount: 2,
@@ -118,6 +180,17 @@ export default function PoolsList() {
                     <span className="rounded-full self-center mx-auto px-2.5 py-1.5 text-orange-500 text-center inline-block w-min font-semibold text-base leading-none">
                       200K
                     </span>
+                    <div className="col-span-2 self-center">
+                      <ProgressBar progress={post.progress} />
+                    </div>
+                    <div className="flex justify-end items-center">
+                      <Link
+                        className="text-orange-500 border border-orange-500 rounded-xl leading-none px-4 py-2.5"
+                        to={"/"}
+                      >
+                        Apply
+                      </Link>
+                    </div>
                   </li>
                 ))}
               </ul>

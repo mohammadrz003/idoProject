@@ -38,11 +38,7 @@ const ViewAllPools = ({ darkMode, landingContainerWidth, navJustify }) => {
         {/*pools header*/}
         <div className="relative">
           <StarsParticles/>
-          <img
-            className="absolute w-32 right-14 top-16"
-            src={poolRocketImg}
-            alt=""
-          />
+
           <header className="relative container mx-auto py-28 z-30">
             <h1 className="z-40 relative text-white text-center font-semibold text-5xl">
               The Decentralized{" "}
