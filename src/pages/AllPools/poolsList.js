@@ -10,14 +10,16 @@ export default function PoolsList() {
     Ongoing: [
       {
         id: 1,
-        title: "Does drinking coffee make you smarter?",
+        title: "Dotmoovs BNB",
+        img: "image/coins/dotmoovs.jpg",
         date: "5h ago",
         commentCount: 5,
         shareCount: 2,
       },
       {
         id: 2,
-        title: "So you've bought coffee... now what?",
+        title: "Royale Finance",
+        img: "image/coins/realfevr.jpg",
         date: "2h ago",
         commentCount: 3,
         shareCount: 2,
@@ -58,7 +60,7 @@ export default function PoolsList() {
   });
 
   return (
-    <div className="relative bottom-10 w-full max-w-xxxl mx-auto px-2 sm:px-0">
+    <div className="relative bottom-16 w-full max-w-xxxl mx-auto px-2 sm:px-0">
       <Tab.Group>
         <Tab.List className="flex p-1 space-x-6 bg-blue-900/20 rounded-xl">
           {Object.keys(categories).map((category) => (
@@ -77,48 +79,45 @@ export default function PoolsList() {
             </Tab>
           ))}
         </Tab.List>
-        <div className="grid grid-cols-10 gap-x-2 justify-start mt-5 text-gray-500 font-semibold text-sm">
-            <span className="col-span-3">Pool name</span>
-            <span className="text-center">Status</span>
-            <span className="text-center">Access</span>
-            <span className="text-center">Ratio, 1BUSD</span>
-            <span className="text-center">Total raise</span>
-            <span className="text-center">Participats</span>
+        <div className="grid grid-cols-10 gap-x-2 px-7 justify-start mt-5 text-gray-500 font-semibold text-sm">
+          <span className="relative right-7 col-span-3">Pool name</span>
+          <span className="text-center">Status</span>
+          <span className="text-center">Access</span>
+          <span className="text-center">Ratio, 1BUSD</span>
+          <span className="text-center">Total raise</span>
+          <span className="text-left col-span-2">Progress</span>
         </div>
         <Tab.Panels className="mt-2">
           {Object.values(categories).map((posts, idx) => (
-            <Tab.Panel
-              key={idx}
-              className={classNames(
-                "bg-white rounded-xl p-3",
-                "focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60"
-              )}
-            >
+            <Tab.Panel key={idx}>
               <ul>
                 {posts.map((post) => (
                   <li
                     key={post.id}
-                    className="relative p-3 rounded-md hover:bg-coolGray-100"
+                    className="cursor-pointer bg-gradient-to-b from-darkMode-800 to-darkMode-600 border border-gray-600 grid grid-cols-10 gap-x-2 px-7 py-4 rounded-lg mt-3"
                   >
-                    <h3 className="text-sm font-medium leading-5">
-                      {post.title}
-                    </h3>
-
-                    <ul className="flex mt-1 space-x-1 text-xs font-normal leading-4 text-coolGray-500">
-                      <li>{post.date}</li>
-                      <li>&middot;</li>
-                      <li>{post.commentCount} comments</li>
-                      <li>&middot;</li>
-                      <li>{post.shareCount} shares</li>
-                    </ul>
-
-                    <a
-                      href="#"
-                      className={classNames(
-                        "absolute inset-0 rounded-md",
-                        "focus:z-10 focus:outline-none focus:ring-2 ring-blue-400"
-                      )}
-                    />
+                    <div className="col-span-3 flex items-center space-x-4">
+                      <img
+                        className="rounded-full h-12"
+                        src={post.img}
+                        alt=""
+                      />
+                      <h3 className="text-base font-bold leading-5 text-white">
+                        {post.title}
+                      </h3>
+                    </div>
+                    <span className="bg-gradient-to-t from-orange-500 to-orange-300 rounded-full self-center mx-auto px-2.5 py-1.5 text-white text-center inline-block w-min font-semibold text-xs leading-none">
+                      Ongoing
+                    </span>
+                    <span className="rounded-full self-center mx-auto px-2.5 py-1.5 text-white text-center inline-block w-min font-semibold text-base leading-none">
+                      Private
+                    </span>
+                    <span className="rounded-full self-center mx-auto px-2.5 py-1.5 text-white text-center inline-block w-min font-semibold text-base leading-none">
+                      8303.00
+                    </span>
+                    <span className="rounded-full self-center mx-auto px-2.5 py-1.5 text-orange-500 text-center inline-block w-min font-semibold text-base leading-none">
+                      200K
+                    </span>
                   </li>
                 ))}
               </ul>

@@ -22,3 +22,7 @@
   background: linear-gradient(180deg,transparent 27%,#1f212c);
 }
 
+.glassEffect {
+  backdrop-filter: blur(100px);
+}
+
