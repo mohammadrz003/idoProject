@@ -11,9 +11,10 @@ import cometImg from "../../img/comet.svg";
 import jupiturImg from "../../img/jupitur.png";
 import PoolsList from "./poolsList";
 import StarsParticles from "./starsParticles";
+import spaceMan from "../../img/spaceman.svg";
 
 const navigation = [
-  { name: "Marketplace", href: "LandingSection#" },
+  { name: "Marketplace", href: "#" },
   { name: "Company", href: "#" },
 ];
 
@@ -30,26 +31,28 @@ const ViewAllPools = ({ darkMode, landingContainerWidth, navJustify }) => {
 
   return (
     <>
-      <div className="relative bg-white dark:bg-darkMode-600 overflow-x-hidden">
+      <div className="relative bg-white dark:bg-darkMode-600 overflow-hidden">
         <div className="container mx-auto">
           <NavBar darkMode={darkMode} navigation={navigation} />
         </div>
 
         {/*pools header*/}
         <div className="relative">
+          {/* <img className="absolute w-52 bottom-0 left-2" src={spaceMan} alt=""/> */}
           <StarsParticles/>
 
-          <header className="relative container mx-auto py-28 z-30">
-            <h1 className="z-40 relative text-white text-center font-semibold text-5xl">
-              The Decentralized{" "}
+          <header className="container mx-auto py-24 text-center">
+            <h1 className="text-white text-center lg:text-center font-semibold text-5xl">
+              Decentralized{" "}
               <span className={`${Classes.textGradient}`}>
                 Launchpad Platform
               </span>
             </h1>
-            <p className="z-40 relative text-center text-white text-opacity-70 font-medium pt-7">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor
-            </p>
+            <div className="inline-block p-px bg-gradient-to-tl from-orange-500 to-orange-300 mt-8">
+            <a className="relative z-10 text-white bg-darkMode-600 inline-block font-medium leading-none py-3 px-9" href="#">
+              Get started
+            </a>
+            </div>
           </header>
         </div>
 
@@ -68,7 +71,7 @@ const ViewAllPools = ({ darkMode, landingContainerWidth, navJustify }) => {
         </svg>
 
         <div className="bg-darkMode-800">
-          <div className="container mx-auto">
+          <div className="container mx-auto px-3">
             <PoolsList />
           </div>
         </div>

@@ -319,7 +319,7 @@ const NavBar = ({darkMode, navigation}) => {
                             <Popover.Panel
                                 focus
                                 static
-                                className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+                                className="absolute z-50 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
                             >
                                 <div
                                     className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden dark:bg-darkMode-500">

@@ -86,36 +86,49 @@ export default function PoolsList() {
     Future: [
       {
         id: 1,
-        title: "Is tech making coffee better or worse?",
-        progress: "65",
-        date: "Jan 7",
-        commentCount: 29,
-        shareCount: 16,
+        title: "Dotmoovs BNB",
+        img: "image/coins/dotmoovs.jpg",
+        progress: "75",
+        date: "5h ago",
+        commentCount: 5,
+        shareCount: 2,
       },
       {
         id: 2,
-        title: "The most innovative things happening in coffee",
+        title: "Royale Finance",
+        img: "image/coins/realfevr.jpg",
         progress: "65",
-        date: "Mar 19",
-        commentCount: 24,
-        shareCount: 12,
+        date: "2h ago",
+        commentCount: 3,
+        shareCount: 2,
       },
     ],
     Ended: [
       {
         id: 1,
-        title: "Ask Me Anything: 10 answers to your questions about coffee",
-        progress: "65",
-        date: "2d ago",
-        commentCount: 9,
-        shareCount: 5,
+        title: "Dotmoovs BNB",
+        img: "image/coins/dotmoovs.jpg",
+        progress: "75",
+        date: "5h ago",
+        commentCount: 5,
+        shareCount: 2,
       },
       {
         id: 2,
-        title: "The worst advice we've ever heard about coffee",
+        title: "Royale Finance",
+        img: "image/coins/realfevr.jpg",
         progress: "65",
-        date: "4d ago",
-        commentCount: 1,
+        date: "2h ago",
+        commentCount: 3,
+        shareCount: 2,
+      },
+      {
+        id: 1,
+        title: "Dotmoovs BNB",
+        img: "image/coins/dotmoovs.jpg",
+        progress: "75",
+        date: "5h ago",
+        commentCount: 5,
         shareCount: 2,
       },
     ],
@@ -141,22 +154,22 @@ export default function PoolsList() {
             </Tab>
           ))}
         </Tab.List>
-        <div className="grid grid-cols-10 gap-x-2 px-7 justify-start mt-5 text-gray-500 font-semibold text-sm">
+        <div className="hidden md:grid md:grid-cols-10 md:gap-x-2 px-7 justify-start mt-5 text-gray-500 font-semibold text-sm">
           <span className="relative right-7 col-span-3">Pool name</span>
-          <span className="text-center">Status</span>
+          <span className="text-center md:hidden lg:inline-block">Status</span>
           <span className="text-center">Access</span>
           <span className="text-center">Ratio, 1BUSD</span>
           <span className="text-center">Total raise</span>
           <span className="text-left col-span-2">Progress</span>
         </div>
-        <Tab.Panels className="mt-2">
+        <Tab.Panels className="mt-5 md:mt-2">
           {Object.values(categories).map((posts, idx) => (
             <Tab.Panel key={idx}>
               <ul>
                 {posts.map((post) => (
                   <li
                     key={post.id}
-                    className="cursor-pointer bg-gradient-to-b from-darkMode-800 to-darkMode-600 border border-gray-600 grid grid-cols-10 gap-x-2 px-7 py-4 rounded-lg mt-3"
+                    className="md:grid md:grid-cols-10 md:gap-x-2 cursor-pointer bg-gradient-to-b from-darkMode-800 to-darkMode-600 border border-gray-600 px-7 py-4 rounded-lg mt-3"
                   >
                     <div className="col-span-3 flex items-center space-x-4">
                       <img
@@ -168,22 +181,44 @@ export default function PoolsList() {
                         {post.title}
                       </h3>
                     </div>
-                    <span className="bg-gradient-to-t from-orange-500 to-orange-300 rounded-full self-center mx-auto px-2.5 py-1.5 text-white text-center inline-block w-min font-semibold text-xs leading-none">
-                      Ongoing
-                    </span>
-                    <span className="rounded-full self-center mx-auto px-2.5 py-1.5 text-white text-center inline-block w-min font-semibold text-base leading-none">
-                      Private
-                    </span>
-                    <span className="rounded-full self-center mx-auto px-2.5 py-1.5 text-white text-center inline-block w-min font-semibold text-base leading-none">
-                      8303.00
-                    </span>
-                    <span className="rounded-full self-center mx-auto px-2.5 py-1.5 text-orange-500 text-center inline-block w-min font-semibold text-base leading-none">
-                      200K
-                    </span>
-                    <div className="col-span-2 self-center">
+                    <div className="flex md:hidden lg:flex justify-between mt-4 md:mt-0 md:self-center md:mx-auto">
+                      <span className="md:hidden font-semibold text-white text-opacity-90">
+                        Status
+                      </span>
+                      <span className="bg-gradient-to-t from-orange-500 to-orange-300 rounded-full px-2.5 py-1.5 text-white text-center inline-block w-min font-semibold text-xs leading-none">
+                        Ongoing
+                      </span>
+                    </div>
+                    <div className="flex justify-between mt-4 md:mt-0 md:self-center md:mx-auto">
+                      <span className="md:hidden font-semibold text-white text-opacity-90">
+                        Access
+                      </span>
+                      <span className="rounded-full px-2.5 py-1.5 text-white text-center inline-block w-min font-semibold text-base leading-none">
+                        Private
+                      </span>
+                    </div>
+                    <div className="flex justify-between mt-4 md:mt-0 md:self-center md:mx-auto">
+                      <span className="md:hidden font-semibold text-white text-opacity-90">
+                        Ratio, 1BUSD
+                      </span>
+                      <span className="rounded-full px-2.5 py-1.5 text-white text-center inline-block w-min font-semibold text-base leading-none">
+                        8303.00
+                      </span>
+                    </div>
+                    <div className="flex justify-between mt-4 md:mt-0 md:self-center md:mx-auto">
+                      <span className="md:hidden font-semibold text-white text-opacity-90">
+                        Total raise
+                      </span>
+                      <span className="rounded-full px-2.5 py-1.5 text-orange-500 text-center inline-block w-min font-semibold text-base leading-none">
+                        200K
+                      </span>
+                    </div>
+
+                    <div className="mt-4 mb-4 md:mt-0 md:mb-0 col-span-2 self-center">
                       <ProgressBar progress={post.progress} />
                     </div>
-                    <div className="flex justify-end items-center">
+
+                    <div className="hidden md:col-start-10 md:flex justify-end items-center">
                       <Link
                         className="text-orange-500 border border-orange-500 rounded-xl leading-none px-4 py-2.5"
                         to={"/"}
