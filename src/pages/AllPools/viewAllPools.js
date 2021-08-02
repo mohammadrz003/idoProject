@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Classes from "./poolsStyle.module.css";
 // notify
 import { ToastContainer, toast } from "react-toastify";
@@ -12,6 +12,8 @@ import jupiturImg from "../../img/jupitur.png";
 import PoolsList from "./poolsList";
 import StarsParticles from "./starsParticles";
 import spaceMan from "../../img/spaceman.svg";
+import ParticleEffectButton from "react-particle-effect-button";
+import ButtonEffect from "./buttonEffect";
 
 const navigation = [
   { name: "Marketplace", href: "#" },
@@ -37,11 +39,18 @@ const ViewAllPools = ({ darkMode, landingContainerWidth, navJustify }) => {
         </div>
 
         {/*pools header*/}
-        <div className="relative">
-          {/* <img className="absolute w-52 bottom-0 left-2" src={spaceMan} alt=""/> */}
-          <StarsParticles/>
+        <div className="scene relative">
+          <StarsParticles />
 
-          <header className="container mx-auto py-24 text-center">
+          <header className="relative container mx-auto py-24 text-center">
+
+            <div className={`${Classes.bounceEffects} absolute lg:-bottom-10 lg:-left-9 xl:bottom-0 xl:left-2 bottom-0 left-2`}>
+              <img
+                className="w-40 lg:w-52"
+                src={spaceMan}
+                alt=""
+              />
+            </div>
             <h1 className="text-white text-center lg:text-center font-semibold text-5xl">
               Decentralized{" "}
               <span className={`${Classes.textGradient}`}>
@@ -49,9 +58,12 @@ const ViewAllPools = ({ darkMode, landingContainerWidth, navJustify }) => {
               </span>
             </h1>
             <div className="inline-block p-px bg-gradient-to-tl from-orange-500 to-orange-300 mt-8">
-            <a className="relative z-10 text-white bg-darkMode-600 inline-block font-medium leading-none py-3 px-9" href="#">
-              Get started
-            </a>
+              <a
+                className="relative z-10 text-white bg-darkMode-600 inline-block font-medium leading-none py-3 px-9"
+                href="#"
+              >
+                Get started
+              </a>
             </div>
           </header>
         </div>

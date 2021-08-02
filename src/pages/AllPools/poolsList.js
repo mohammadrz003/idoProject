@@ -143,7 +143,7 @@ export default function PoolsList() {
               key={category}
               className={({ selected }) =>
                 classNames(
-                  "w-full md:w-auto text-xl leading-5 font-bold py-3",
+                  "w-full md:w-auto focus:outline-none text-xl leading-5 font-bold py-3",
                   selected
                     ? "border-b-2 border-orange-500 text-white"
                     : "text-gray-500"
@@ -162,14 +162,14 @@ export default function PoolsList() {
           <span className="text-center">Total raise</span>
           <span className="text-left col-span-2">Progress</span>
         </div>
-        <Tab.Panels className="mt-5 md:mt-2">
+        <Tab.Panels className="mt-5 md:mt-2 focus:outline-none">
           {Object.values(categories).map((posts, idx) => (
             <Tab.Panel key={idx}>
-              <ul>
+              <ul className="focus:outline-none">
                 {posts.map((post) => (
                   <li
                     key={post.id}
-                    className="md:grid md:grid-cols-10 md:gap-x-2 cursor-pointer bg-gradient-to-b from-darkMode-800 to-darkMode-600 border border-gray-600 px-7 py-4 rounded-lg mt-3"
+                    className="focus:outline-none md:grid md:grid-cols-10 md:gap-x-2 cursor-pointer bg-gradient-to-b from-darkMode-800 to-darkMode-600 border border-gray-600 px-7 py-4 rounded-lg mt-3"
                   >
                     <div className="col-span-3 flex items-center space-x-4">
                       <img

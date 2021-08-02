@@ -58,6 +58,7 @@ const StarsParticles = () => {
                     },
                     retina_detect: true,
                 }}
+
             />
         </>
     );
