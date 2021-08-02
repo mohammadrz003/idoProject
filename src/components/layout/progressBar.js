@@ -1,6 +1,4 @@
-import { classes } from "istanbul-lib-coverage";
 import React from "react";
-import fireBall from "../../img/fireball.png";
 import Classes from "../style/cardStyle.module.css";
 
 const ProgressBar = ({ progress }) => {
@@ -10,12 +8,6 @@ const ProgressBar = ({ progress }) => {
         style={{ width: `${progress}%` }}
         className="absolute top-0 left-0 h-full rounded-md inline-block bg-gradient-to-r from-orange-500 to-orange-300"
       />
-      {/* <img
-        style={{ left: `${progress}%` }}
-        className={`absolute z-50 top-0 ${Classes.progressFire}`}
-        src={fireBall}
-        alt=""
-      /> */}
 
       <svg
         style={{ left: `${progress}%` }}

@@ -168,10 +168,10 @@ export default function PoolsList() {
           <span className="text-center">Total raise</span>
           <span className="text-left col-span-2">Progress</span>
         </div>
-        <Tab.Panels className="mt-5 md:mt-2 focus:outline-none">
+        <Tab.Panels className="mt-5 md:mt-2 focus:outline-none focus:border-0">
           {Object.values(categories).map((posts, idx) => (
-            <Tab.Panel key={idx}>
-                <ul className="focus:outline-none">
+            <Tab.Panel key={idx} className="focus:outline-none focus:border-0">
+                <ul className="focus:outline-none focus:border-0">
                   {posts.map((post) => (
 
                       <li

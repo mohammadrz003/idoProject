@@ -1,19 +1,14 @@
 import React, { useRef, useState } from "react";
 import Classes from "./poolsStyle.module.css";
+import Typing from "react-typing-animation";
 // notify
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 // image
 import NavBar from "../../components/layout/navBar";
-import poolRocketImg from "../../img/rocket-pool.svg";
-import stars from "../../img/stars.svg";
-import cometImg from "../../img/comet.svg";
-import jupiturImg from "../../img/jupitur.png";
 import PoolsList from "./poolsList";
 import StarsParticles from "./starsParticles";
 import spaceMan from "../../img/spaceman.svg";
-import ParticleEffectButton from "react-particle-effect-button";
-import ButtonEffect from "./buttonEffect";
 
 const navigation = [
   { name: "Marketplace", href: "#" },
@@ -43,21 +38,18 @@ const ViewAllPools = ({ darkMode, landingContainerWidth, navJustify }) => {
           <StarsParticles />
 
           <header className="relative container mx-auto py-24 text-center">
-
-            <div className={`${Classes.bounceEffects} absolute lg:-bottom-10 lg:-left-9 xl:bottom-0 xl:left-2 bottom-0 left-2`}>
-              <img
-                className="w-40 lg:w-52"
-                src={spaceMan}
-                alt=""
-              />
+            <div
+              className={`${Classes.bounceEffects} absolute lg:-bottom-10 lg:-left-9 xl:bottom-0 xl:left-2 bottom-0 left-2`}
+            >
+              <img className="w-40 lg:w-52" src={spaceMan} alt="" />
             </div>
-            <h1 className="text-white text-center lg:text-center font-semibold text-5xl">
-              Decentralized{" "}
+            <Typing speed={1} className="text-white text-center lg:text-center font-semibold text-5xl">
+                Decentralized{" "}
               <span className={`${Classes.textGradient}`}>
                 Launchpad Platform
               </span>
-            </h1>
-            <div className="inline-block p-px bg-gradient-to-tl from-orange-500 to-orange-300 mt-8">
+            </Typing>
+            <div className="relative z-10 inline-block p-px bg-gradient-to-tl from-orange-500 to-orange-300 mt-8">
               <a
                 className="relative z-10 text-white bg-darkMode-600 inline-block font-medium leading-none py-3 px-9"
                 href="#"
