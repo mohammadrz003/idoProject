@@ -22,9 +22,10 @@
   background: linear-gradient(180deg, transparent 27%, #1f212c);
 }
 
-.glassEffect {
-  backdrop-filter: blur(100px);
-}
+/*.boxPoolBackground {*/
+/*  background-image: url("../../img/rocket-launchpad.jpg") !important;*/
+/*  !*background-color: red;*!*/
+/*}*/
 
 .bounceEffects {
   -webkit-animation-name: bounceEffect;

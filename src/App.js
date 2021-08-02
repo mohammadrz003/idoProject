@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import "./style.css";
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Roadmap from "./pages/Home/roadmap";
 import MobileRoadmap from "./pages/Home/mobileRoadmap";
 import IdoCard from "./components/layout/idoCard";
@@ -18,9 +18,12 @@ function App() {
     return (
         <div className={`${useDarkMode}`}>
             <BrowserRouter>
-                <Route path={'/pools'} component={() => <AllPoolsLayout/>}/>
-                <Route exact path={'/'} component={() => <HomeLayout useDarkMode={useDarkMode}/>}/>
+                <Switch>
+                    <Route path={'/pools'} component={() => <AllPoolsLayout/>}/>
+                    <Route path={'/'} component={() => <HomeLayout useDarkMode={useDarkMode}/>}/>
+                </Switch>
             </BrowserRouter>
+            
             <Footer setDark={toggleTheme}/>
         </div>
     );
