@@ -223,8 +223,8 @@ export default function PoolsList() {
                       </span>
                         </div>
 
-                        <div className="mt-4 mb-4 md:mt-0 md:mb-0 col-span-2 self-center">
-                          <ProgressBar progress={post.progress} />
+                        <div className="mt-6 mb-4 md:mt-0 md:mb-0 col-span-2 self-center">
+                          <ProgressBar progress={post.progress} display={"block"} />
                         </div>
 
                         <div className="hidden md:col-start-10 md:flex justify-end items-center">

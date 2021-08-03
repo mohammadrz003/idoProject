@@ -1,13 +1,14 @@
 import React from "react";
 import Classes from "../style/cardStyle.module.css";
 
-const ProgressBar = ({ progress }) => {
+const ProgressBar = ({ progress, display }) => {
   return (
     <div className="w-full h-2.5 rounded-md bg-gray-200 dark:bg-gray-700 relative">
       <span
         style={{ width: `${progress}%` }}
         className="absolute top-0 left-0 h-full rounded-md inline-block bg-gradient-to-r from-orange-500 to-orange-300"
       />
+      <span style={{left: `${progress}%`}} className={`${display} ${Classes.progressPercent} absolute bottom-2 text-sm text-white`}>70%</span>
 
       <svg
         style={{ left: `${progress}%` }}

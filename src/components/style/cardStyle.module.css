@@ -16,3 +16,6 @@
   width: 50px;
 }
 
+.progressPercent {
+  transform: translate(-40%, -37%);
+}

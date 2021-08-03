@@ -28,7 +28,7 @@ const ViewAllPools = ({ darkMode, landingContainerWidth, navJustify }) => {
 
   return (
     <>
-      <div className="relative bg-white dark:bg-darkMode-600 overflow-hidden">
+      <div className="relative bg-darkMode-600 overflow-hidden">
         <div className="container mx-auto">
           <NavBar darkMode={darkMode} navigation={navigation} />
         </div>
@@ -43,7 +43,7 @@ const ViewAllPools = ({ darkMode, landingContainerWidth, navJustify }) => {
             >
               <img className="w-40 lg:w-52" src={spaceMan} alt="" />
             </div>
-            <Typing speed={1} className="text-white text-center lg:text-center font-semibold text-5xl">
+            <Typing speed={1} hideCursor="true" className="text-white text-center lg:text-center font-semibold text-5xl">
                 Decentralized{" "}
               <span className={`${Classes.textGradient}`}>
                 Launchpad Platform

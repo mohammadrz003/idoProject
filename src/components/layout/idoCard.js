@@ -57,9 +57,9 @@ const IdoCard = () => {
                 </p>
 
                 {/*progress line*/}
-                <ProgressBar progress={progress}/>
+                <ProgressBar progress={progress} display={"hidden"} />
 
-                <div className="flex justify-between">
+                <div className="flex justify-between mt-1">
                   <span className="font-medium text-sm dark:text-white dark:text-opacity-80">
                     {progress}%
                   </span>
