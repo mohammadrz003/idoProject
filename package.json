@@ -21,6 +21,7 @@
     "react-particles-js": "^3.5.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "react-scroll": "^1.8.3",
     "react-tabs": "^3.2.2",
     "react-toastify": "^7.0.4",
     "react-tsparticles": "^1.33.1",
