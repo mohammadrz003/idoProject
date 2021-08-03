@@ -3,8 +3,10 @@ import footerLogo from "../../img/bull-logo.png";
 import { useState } from "react";
 import { Switch } from "@headlessui/react";
 
-const Footer = () => {
-  const [enabled, setEnabled] = useState(false);
+const Footer = ({ darkMode, setDark }) => {
+  const getLocalMode = window.localStorage.getItem("theme");
+  console.log(getLocalMode)
+  const [enabled, setEnabled] = useState(getLocalMode === 'dark' ? true : false);
 
   return (
     <section className="bg-secondery-400">
@@ -45,20 +47,22 @@ const Footer = () => {
               <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
             </svg>
             {/* <p className="font-medium">Dark Mode</p> */}
-            <Switch
-              checked={enabled}
-              onChange={setEnabled}
-              className={`${
-                enabled ? "bg-blue-600" : "bg-gray-500"
-              } relative inline-flex items-center h-6 rounded-full w-11`}
-            >
-              <span className="sr-only">Enable notifications</span>
-              <span
+            <div onClick={setDark}>
+              <Switch
+                checked={enabled}
+                onChange={setEnabled}
                 className={`${
-                  enabled ? "translate-x-6" : "translate-x-1"
-                } inline-block w-4 h-4 transform bg-white rounded-full`}
-              />
-            </Switch>
+                  enabled ? "bg-blue-600" : "bg-gray-500"
+                } relative inline-flex items-center h-6 rounded-full w-11`}
+              >
+                <span className="sr-only">Enable notifications</span>
+                <span
+                  className={`${
+                    enabled ? "translate-x-6" : "translate-x-1"
+                  } inline-block w-4 h-4 transform bg-white rounded-full`}
+                />
+              </Switch>
+            </div>
           </div>
           {/* <span className="inline-block text-sm text-center md:text-left">English</span> */}
           <div className="flex justify-center space-x-10">

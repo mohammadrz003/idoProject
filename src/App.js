@@ -1,29 +1,32 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./style.css";
-import Roadmap from "./components/layout/roadmap";
-import MobileRoadmap from "./components/layout/mobileRoadmap";
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import Roadmap from "./pages/Home/roadmap";
+import MobileRoadmap from "./pages/Home/mobileRoadmap";
 import IdoCard from "./components/layout/idoCard";
-import Feature from "./components/layout/feature";
+import Feature from "./pages/Home/feature";
 import Footer from "./components/layout/footer";
-import Example from "./components/layout/landingSection";
-
+import LandingSection from "./pages/Home/landingSection";
+import {useDarkModes} from "./components/layout/useDarkMode";
+import ViewAllPools from "./pages/AllPools/viewAllPools";
+import HomeLayout from "./pageLayout/HomeLayout";
+import AllPoolsLayout from "./pageLayout/AllPoolsLayout";
 
 function App() {
-  return (
-    <div>
-      <Example/>
-      {/* <Header/> */}
+    const [useDarkMode, toggleTheme] = useDarkModes();
 
-      <main>
-        {/* <Landing/> */}
-        <MobileRoadmap/>
-        <Roadmap/>
-        <IdoCard/>
-        <Feature/>
-        <Footer/>
-      </main>
-    </div>
-  );
+    return (
+        <div className={`${useDarkMode}`}>
+            <BrowserRouter>
+                <Switch>
+                    <Route path={'/pools'} component={() => <AllPoolsLayout/>}/>
+                    <Route path={'/'} component={() => <HomeLayout useDarkMode={useDarkMode}/>}/>
+                </Switch>
+            </BrowserRouter>
+            
+            <Footer setDark={toggleTheme}/>
+        </div>
+    );
 }
 
 export default App;

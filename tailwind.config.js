@@ -1,6 +1,6 @@
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
@@ -24,6 +24,22 @@ module.exports = {
           100: "#FAFAFA",
           200: "#E6E7E8"
         },
+        darkMode: {
+          100: '#E5E5E5',
+          200: '#848484',
+          300: '#FFC045',
+          // 300: '#FFD700',
+          400: '#1b1d26',
+          500: '#393E46',
+          600: '#1f212c',
+          700: '#1D1D1D',
+          800: '#292c36',
+          900: '#272a34',
+        },
+        orange: {
+          300: '#f59058',
+          500: '#DB483B'
+        }
       },
       fontFamily: {
         montserrat: "'Montserrat', sans-serif",
@@ -33,8 +49,12 @@ module.exports = {
       },
       maxWidth: {
         xsm: '15rem',
-        xxs: '17rem'
+        xxs: '17rem',
+        xxxl: '70rem',
       },
+      minWidth: {
+        xxl: '1400px',
+      }
     },
   },
   variants: {
