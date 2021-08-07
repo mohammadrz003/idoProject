@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   CircleBox,
   SemiCircle,
@@ -38,16 +38,23 @@ const TransparentBackground = styled.div`
 `;
 
 const MobileProgressBar = ({image, percentage}) => {
+  const [idoPercent, setIdoPercent] = useState(100);
+
+  const addPercent = ()=> {
+    setIdoPercent((prev)=> prev + 1)
+  }
+
   return (
     <ProgressWrapper>
-      <ProgressRocket src={rocketImg} />
+      {/* <ProgressRocket src={rocketImg} /> */}
       <CircleBox>
         <TransparentBackground />
         <GradientBackground />
         <IdoImg src={image} />
-        <SemiCircle percent={percentage} />
-        <SemiCircleTwo percent={percentage} />
+        <SemiCircle percent={idoPercent} />
+        <SemiCircleTwo percent={idoPercent} />
       </CircleBox>
+      <button onClick={addPercent} className={"text-white"}>click me</button>
     </ProgressWrapper>
   );
 };

@@ -35,7 +35,7 @@ export const SemiCircle = styled.div`
   width: 50%;
   height: 100%;
   overflow: hidden;
-  --percentage: ${(props => (props.percent * -1))};
+  --percentage: ${(props => (props.percent >= 50 ? (props.percent - 50) * 2 : 0))};
 
   &::after {
     content: "";
@@ -45,7 +45,7 @@ export const SemiCircle = styled.div`
     width: 120px;
     height: 120px;
     border: 10px solid;
-    border-color: #495057 transparent transparent #495057;
+    border-color: #495057 #00b4d8 #00b4d8 #495057;
     border-radius: 50%;
     transform: rotate(calc(1deg * (-45 + (var(--percentage) * 1.8))));
   }
@@ -57,7 +57,7 @@ export const SemiCircleTwo = styled.div`
   width: 50%;
   height: 100%;
   overflow: hidden;
-  --percentage: ${(props => (props.percent))};
+  --percentage: ${(props => (props.percent >= 50 ? 100 : props.percent * 2))};
 
   &::after {
     content: "";
@@ -67,7 +67,7 @@ export const SemiCircleTwo = styled.div`
     width: 120px;
     height: 120px;
     border: 10px solid;
-    border-color: transparent #495057 #495057 transparent;
+    border-color: #db483b #495057 #495057 #db483b;
     border-radius: 50%;
     transform: translate(-50%, 0) rotate(calc(1deg * (-45 + (var(--percentage) * 1.8))));
   }

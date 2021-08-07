@@ -183,7 +183,7 @@ export default function PoolsList() {
                     key={post.id}
                     className="flex flex-col items-center focus:outline-none md:grid md:grid-cols-10 md:gap-x-2 cursor-pointer bg-gradient-to-b from-darkMode-800 to-darkMode-600 border border-gray-600 px-7 py-4 rounded-lg mt-3"
                   >
-                    <MobileProgressBar image={post.img} percentage={post.progress}/>
+                    <MobileProgressBar image={post.img} percentage={70}/>
                     {/* ido image for laptop */}
                     <div className="hidden col-span-3 md:flex items-center space-x-4">
                       <img
