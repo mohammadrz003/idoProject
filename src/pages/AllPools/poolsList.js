@@ -42,7 +42,7 @@ export default function PoolsList() {
         id: 1,
         title: "Dotmoovs BNB",
         img: "image/coins/dotmoovs.jpg",
-        progress: "75",
+        progress: "21",
         date: "5h ago",
         commentCount: 5,
         shareCount: 2,
@@ -51,7 +51,7 @@ export default function PoolsList() {
         id: 2,
         title: "Royale Finance",
         img: "image/coins/realfevr.jpg",
-        progress: "65",
+        progress: "92",
         date: "2h ago",
         commentCount: 3,
         shareCount: 2,
@@ -60,7 +60,7 @@ export default function PoolsList() {
         id: 1,
         title: "Dotmoovs BNB",
         img: "image/coins/dotmoovs.jpg",
-        progress: "75",
+        progress: "56",
         date: "5h ago",
         commentCount: 5,
         shareCount: 2,
@@ -69,7 +69,7 @@ export default function PoolsList() {
         id: 2,
         title: "Royale Finance",
         img: "image/coins/realfevr.jpg",
-        progress: "65",
+        progress: "10",
         date: "2h ago",
         commentCount: 3,
         shareCount: 2,
@@ -78,7 +78,7 @@ export default function PoolsList() {
         id: 1,
         title: "Dotmoovs BNB",
         img: "image/coins/dotmoovs.jpg",
-        progress: "75",
+        progress: "83",
         date: "5h ago",
         commentCount: 5,
         shareCount: 2,
@@ -87,7 +87,7 @@ export default function PoolsList() {
         id: 2,
         title: "Royale Finance",
         img: "image/coins/realfevr.jpg",
-        progress: "65",
+        progress: "90",
         date: "2h ago",
         commentCount: 3,
         shareCount: 2,
@@ -183,7 +183,7 @@ export default function PoolsList() {
                     key={post.id}
                     className="flex flex-col items-center focus:outline-none md:grid md:grid-cols-10 md:gap-x-2 cursor-pointer bg-gradient-to-b from-darkMode-800 to-darkMode-600 border border-gray-600 px-7 py-4 rounded-lg mt-3"
                   >
-                    <MobileProgressBar/>
+                    <MobileProgressBar image={post.img} percentage={post.progress}/>
                     {/* ido image for laptop */}
                     <div className="hidden col-span-3 md:flex items-center space-x-4">
                       <img
