@@ -4,6 +4,7 @@ import ProgressBar from "../../components/layout/progressBar";
 import { Link as Links } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import MobileProgressBar from "./progress-bar/mobile-progressBar";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -180,9 +181,11 @@ export default function PoolsList() {
                     data-aos="fade-up"
                     data-aos-once="true"
                     key={post.id}
-                    className="focus:outline-none md:grid md:grid-cols-10 md:gap-x-2 cursor-pointer bg-gradient-to-b from-darkMode-800 to-darkMode-600 border border-gray-600 px-7 py-4 rounded-lg mt-3"
+                    className="flex flex-col items-center focus:outline-none md:grid md:grid-cols-10 md:gap-x-2 cursor-pointer bg-gradient-to-b from-darkMode-800 to-darkMode-600 border border-gray-600 px-7 py-4 rounded-lg mt-3"
                   >
-                    <div className="col-span-3 flex items-center space-x-4">
+                    <MobileProgressBar/>
+                    {/* ido image for laptop */}
+                    <div className="hidden col-span-3 md:flex items-center space-x-4">
                       <img
                         className="rounded-full h-12"
                         src={post.img}
@@ -225,9 +228,9 @@ export default function PoolsList() {
                       </span>
                     </div>
 
-                    <div className="mt-6 mb-4 md:mt-0 md:mb-0 col-span-2 self-center">
+                    {/* <div className="mt-6 mb-4 md:mt-0 md:mb-0 col-span-2 self-center">
                       <ProgressBar progress={post.progress} display={"block"} />
-                    </div>
+                    </div> */}
 
                     <div className="hidden md:col-start-10 md:flex justify-end items-center">
                       <Links

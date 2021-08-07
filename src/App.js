@@ -24,7 +24,7 @@ function App() {
                 </Switch>
             </BrowserRouter>
             
-            <Footer setDark={toggleTheme}/>
+            <Footer darkMode={useDarkMode} setDark={toggleTheme}/>
         </div>
     );
 }
