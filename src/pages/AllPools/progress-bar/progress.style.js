@@ -11,7 +11,9 @@ export const RocketBox = styled.div`
   height: 120px;
   transform: translate(0, 100%) rotate(${props => props.percent * 3.6}deg);
   z-index: 20;
-  transition: all 2.5s linear;
+  transition-property: all;
+  transition-duration: ${(props) => (4000 * (props.percent / 100))}ms;
+  transition-timing-function: linear;
 `
 
 export const ProgressRocket = styled.img`
@@ -60,8 +62,8 @@ export const SemiCircle = styled.div`
     border-radius: 50%;
     transform: rotate(calc(1deg * (-45 + (var(--percentage) * 1.8))));
     transition-property: all;
-    transition-duration: 2s;
-    transition-delay: 2s;
+    transition-duration: ${(props) => (4000 * ((props.percent - 50) * 2 / 100))}ms;
+    transition-delay: ${(props) => (4000 * (props.percent / 100))}ms;
     transition-timing-function: linear;
   }
 `;
@@ -85,6 +87,8 @@ export const SemiCircleTwo = styled.div`
     border-color: transparent #495057 #495057 transparent;
     border-radius: 50%;
     transform: translate(-50%, 0) rotate(calc(1deg * (-45 + (var(--percentage) * 1.8))));
-    transition: all 2s linear;
+    transition-property: all;
+    transition-duration: ${(props) => (4000 * (props.percent / 100))}ms;
+    transition-timing-function: linear;
   }
 `;

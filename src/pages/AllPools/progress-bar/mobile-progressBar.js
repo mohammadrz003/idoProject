@@ -49,7 +49,7 @@ const MobileProgressBar = ({ image, percentage }) => {
   };
 
   return (
-    <Waypoint onEnter={()=> setIdoPercent(percentage)}>
+    <Waypoint onEnter={()=> setIdoPercent(45)}>
       <ProgressWrapper>
         <RocketBox percent={idoPercent}>
           <ProgressRocket src={rocketImg} />

@@ -25,6 +25,9 @@ function App() {
             </BrowserRouter>
             
             <Footer darkMode={useDarkMode} setDark={toggleTheme}/>
+            {
+                console.log((2000 * ((100 - 50) * 2 / 100)))
+            }
         </div>
     );
 }
