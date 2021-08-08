@@ -62,8 +62,8 @@ export const SemiCircle = styled.div`
     border-radius: 50%;
     transform: rotate(calc(1deg * (-45 + (var(--percentage) * 1.8))));
     transition-property: all;
-    transition-duration: ${(props) => (4000 * ((props.percent - 50) * 2 / 100))}ms;
-    transition-delay: ${(props) => (4000 * (props.percent / 100))}ms;
+    transition-duration: ${(props) => (props.percent >= 50 ? 2000 * ((props.percent - 50) * 2 / 100) : 0)}ms;
+    transition-delay: ${(props) => (props.percent >= 50 ? 4000 * (50 / 100) : 4000 * (props.percent / 100))}ms;
     transition-timing-function: linear;
   }
 `;
@@ -88,7 +88,7 @@ export const SemiCircleTwo = styled.div`
     border-radius: 50%;
     transform: translate(-50%, 0) rotate(calc(1deg * (-45 + (var(--percentage) * 1.8))));
     transition-property: all;
-    transition-duration: ${(props) => (4000 * (props.percent / 100))}ms;
+    transition-duration: ${(props) => (props.percent >= 50 ? 4000 * (50 / 100) : 4000 * (props.percent / 100))}ms;
     transition-timing-function: linear;
   }
 `;
