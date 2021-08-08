@@ -1,15 +1,26 @@
 import styled from "styled-components";
 
 export const ProgressWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
   //transform: translate(15px, 0) rotate(45deg);
 `
 
+export const RocketBox = styled.div`
+  position: relative;
+  width: 120px;
+  height: 120px;
+  transform: translate(0, 100%) rotate(${props => props.percent * 3.6}deg);
+  z-index: 20;
+  transition: all 2.5s linear;
+`
+
 export const ProgressRocket = styled.img`
-  width: 17px;
-  margin-bottom: 10px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(0, -6px) rotate(90deg);
+  width: 14px;
+  z-index: 20;
 `
 
 export const CircleBox = styled.div`
@@ -45,9 +56,13 @@ export const SemiCircle = styled.div`
     width: 120px;
     height: 120px;
     border: 10px solid;
-    border-color: #495057 #00b4d8 #00b4d8 #495057;
+    border-color: #495057 transparent transparent #495057;
     border-radius: 50%;
     transform: rotate(calc(1deg * (-45 + (var(--percentage) * 1.8))));
+    transition-property: all;
+    transition-duration: 2s;
+    transition-delay: 2s;
+    transition-timing-function: linear;
   }
 `;
 
@@ -67,8 +82,9 @@ export const SemiCircleTwo = styled.div`
     width: 120px;
     height: 120px;
     border: 10px solid;
-    border-color: #db483b #495057 #495057 #db483b;
+    border-color: transparent #495057 #495057 transparent;
     border-radius: 50%;
     transform: translate(-50%, 0) rotate(calc(1deg * (-45 + (var(--percentage) * 1.8))));
+    transition: all 2s linear;
   }
 `;

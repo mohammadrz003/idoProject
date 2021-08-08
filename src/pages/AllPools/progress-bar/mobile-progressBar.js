@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import {
   CircleBox,
   SemiCircle,
@@ -6,9 +6,11 @@ import {
   IdoImg,
   ProgressRocket,
   ProgressWrapper,
+  RocketBox,
 } from "./progress.style";
 import styled from "styled-components";
 import rocketImg from "../../../img/progress-rocket.svg";
+import { Waypoint } from "react-waypoint";
 
 const GradientBackground = styled.div`
   position: absolute;
@@ -18,10 +20,12 @@ const GradientBackground = styled.div`
   width: 119px;
   height: 119px;
   border-radius: 50%;
+  background: rgb(241, 145, 67);
   background: linear-gradient(
-    0deg,
-    rgba(219, 72, 59, 1) 0%,
-    rgba(245, 175, 25, 1) 100%
+    312deg,
+    rgba(241, 145, 67, 1) 0%,
+    rgba(255, 119, 61, 1) 50%,
+    rgba(245, 85, 54, 1) 100%
   );
 `;
 
@@ -37,25 +41,32 @@ const TransparentBackground = styled.div`
   z-index: 3;
 `;
 
-const MobileProgressBar = ({image, percentage}) => {
-  const [idoPercent, setIdoPercent] = useState(100);
+const MobileProgressBar = ({ image, percentage }) => {
+  const [idoPercent, setIdoPercent] = useState(0);
 
-  const addPercent = ()=> {
-    setIdoPercent((prev)=> prev + 1)
-  }
+  const addPercent = () => {
+    setIdoPercent((prev) => prev + 1);
+  };
 
   return (
-    <ProgressWrapper>
-      {/* <ProgressRocket src={rocketImg} /> */}
-      <CircleBox>
-        <TransparentBackground />
-        <GradientBackground />
-        <IdoImg src={image} />
-        <SemiCircle percent={idoPercent} />
-        <SemiCircleTwo percent={idoPercent} />
-      </CircleBox>
-      <button onClick={addPercent} className={"text-white"}>click me</button>
-    </ProgressWrapper>
+    <Waypoint onEnter={()=> setIdoPercent(percentage)}>
+      <ProgressWrapper>
+        <RocketBox percent={idoPercent}>
+          <ProgressRocket src={rocketImg} />
+        </RocketBox>
+
+        <CircleBox>
+          <TransparentBackground />
+          <GradientBackground />
+          <IdoImg src={image} />
+          <SemiCircle percent={idoPercent} />
+          <SemiCircleTwo percent={idoPercent} />
+        </CircleBox>
+        <button onClick={addPercent} className={"text-white"}>
+          click me
+        </button>
+      </ProgressWrapper>
+    </Waypoint>
   );
 };
 
