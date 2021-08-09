@@ -34,8 +34,8 @@ const TransparentBackground = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
+  width: 104px;
+  height: 104px;
   border-radius: 50%;
   background-color: #292c36;
   z-index: 3;
@@ -44,12 +44,8 @@ const TransparentBackground = styled.div`
 const MobileProgressBar = ({ image, percentage }) => {
   const [idoPercent, setIdoPercent] = useState(0);
 
-  const addPercent = () => {
-    setIdoPercent((prev) => prev + 1);
-  };
-
   return (
-    <Waypoint onEnter={()=> setIdoPercent(90)}>
+    <Waypoint onEnter={()=> setIdoPercent(percentage)}>
       <ProgressWrapper>
         <RocketBox percent={idoPercent}>
           <ProgressRocket src={rocketImg} />
@@ -62,9 +58,6 @@ const MobileProgressBar = ({ image, percentage }) => {
           <SemiCircle percent={idoPercent} />
           <SemiCircleTwo percent={idoPercent} />
         </CircleBox>
-        <button onClick={addPercent} className={"text-white"}>
-          click me
-        </button>
       </ProgressWrapper>
     </Waypoint>
   );

@@ -6,10 +6,15 @@ export const ProgressWrapper = styled.div`
 `
 
 export const RocketBox = styled.div`
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 120px;
   height: 120px;
-  transform: translate(0, 100%) rotate(${props => props.percent * 3.6}deg);
+  transform: rotate(${props => props.percent * 3.6}deg);
   z-index: 20;
   transition-property: all;
   transition-duration: ${(props) => (4000 * (props.percent / 100))}ms;
@@ -17,9 +22,6 @@ export const RocketBox = styled.div`
 `
 
 export const ProgressRocket = styled.img`
-  position: absolute;
-  top: 0;
-  left: 50%;
   transform: translate(0, -6px) rotate(90deg);
   width: 14px;
   z-index: 20;
@@ -57,7 +59,7 @@ export const SemiCircle = styled.div`
     left: 0;
     width: 120px;
     height: 120px;
-    border: 10px solid;
+    border: 8px solid;
     border-color: #495057 transparent transparent #495057;
     border-radius: 50%;
     transform: rotate(calc(1deg * (-45 + (var(--percentage) * 1.8))));
@@ -83,7 +85,7 @@ export const SemiCircleTwo = styled.div`
     left: 0;
     width: 120px;
     height: 120px;
-    border: 10px solid;
+    border: 8px solid;
     border-color: transparent #495057 #495057 transparent;
     border-radius: 50%;
     transform: translate(-50%, 0) rotate(calc(1deg * (-45 + (var(--percentage) * 1.8))));

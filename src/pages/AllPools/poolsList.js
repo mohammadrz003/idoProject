@@ -5,6 +5,7 @@ import { Link as Links } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import MobileProgressBar from "./progress-bar/mobile-progressBar";
+import { PoolItem } from "./poolsItem.style";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -177,7 +178,7 @@ export default function PoolsList() {
             <Tab.Panel key={idx} className="focus:outline-none focus:border-0">
               <ul className="focus:outline-none focus:border-0">
                 {posts.map((post) => (
-                  <li
+                  <PoolItem
                     data-aos="fade-up"
                     data-aos-once="true"
                     key={post.id}
@@ -240,7 +241,7 @@ export default function PoolsList() {
                         Apply
                       </Links>
                     </div>
-                  </li>
+                  </PoolItem>
                 ))}
               </ul>
             </Tab.Panel>
