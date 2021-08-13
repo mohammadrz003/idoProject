@@ -9,7 +9,7 @@ const Footer = ({ darkMode, setDark }) => {
   const [enabled, setEnabled] = useState(getLocalMode === 'dark' ? true : false);
 
   return (
-    <section className="bg-secondery-400">
+    <section className="bg-secondery-400 border-t-2 border-gray-800">
       <footer className="container mx-auto flex flex-col px-2 xl:px-20 py-12 lg:px-10 md:px-5 text-secondery-500 text-center">
         <div className="flex justify-center items-center space-x-2">
           <img className="w-12" src={footerLogo} alt="" />

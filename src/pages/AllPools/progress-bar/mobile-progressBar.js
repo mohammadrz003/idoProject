@@ -41,12 +41,12 @@ const TransparentBackground = styled.div`
   z-index: 3;
 `;
 
-const MobileProgressBar = ({ image, percentage }) => {
+const MobileProgressBar = ({ image, percentage, display }) => {
   const [idoPercent, setIdoPercent] = useState(0);
 
   return (
     <Waypoint onEnter={()=> setIdoPercent(percentage)}>
-      <ProgressWrapper className="md:hidden">
+      <ProgressWrapper className={`md:${display}`}>
         <RocketBox percent={idoPercent}>
           <ProgressRocket src={rocketImg} />
         </RocketBox>

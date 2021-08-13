@@ -11,6 +11,7 @@ import {useDarkModes} from "./components/layout/useDarkMode";
 import ViewAllPools from "./pages/AllPools/viewAllPools";
 import HomeLayout from "./pageLayout/HomeLayout";
 import AllPoolsLayout from "./pageLayout/AllPoolsLayout";
+import PoolsDetailLayout from "./pageLayout/PoolsDetailLayout";
 
 function App() {
     const [useDarkMode, toggleTheme] = useDarkModes();
@@ -19,15 +20,13 @@ function App() {
         <div className={`${useDarkMode}`}>
             <BrowserRouter>
                 <Switch>
-                    <Route path={'/pools'} component={() => <AllPoolsLayout/>}/>
+                    <Route path={'/pools/:poolId'} component={() => <PoolsDetailLayout/>}/>
+                    <Route path={'/pools'} component={() => <AllPoolsLayout darkMode={useDarkMode}/>}/>
                     <Route path={'/'} component={() => <HomeLayout useDarkMode={useDarkMode}/>}/>
                 </Switch>
             </BrowserRouter>
             
             <Footer darkMode={useDarkMode} setDark={toggleTheme}/>
-            {
-                console.log((2000 * ((100 - 50) * 2 / 100)))
-            }
         </div>
     );
 }

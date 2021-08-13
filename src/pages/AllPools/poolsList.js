@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Tab } from "@headlessui/react";
 import ProgressBar from "../../components/layout/progressBar";
 import { Link as Links } from "react-router-dom";
-import Aos from "aos";
-import "aos/dist/aos.css";
 import MobileProgressBar from "./progress-bar/mobile-progressBar";
 import { PhoneIdoHeader, PoolItem, Status } from "./poolsItem.style";
 
@@ -11,12 +9,8 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function PoolsList() {
-  useEffect(() => {
-    Aos.init({
-      duration: 500,
-    });
-  }, []);
+export default function PoolsList(props) {
+  
 
   let [categories] = useState({
     Ongoing: [
@@ -177,108 +171,109 @@ export default function PoolsList() {
             <Tab.Panel key={idx} className="focus:outline-none focus:border-0">
               <ul className="focus:outline-none focus:border-0">
                 {posts.map((post) => (
-                  <PoolItem
-                    data-aos="fade-up"
-                    data-aos-once="true"
-                    key={post.id}
-                    className="relative focus:outline-none md:grid md:grid-cols-10 md:gap-x-2 cursor-pointer bg-gradient-to-b from-darkMode-800 to-darkMode-600 border border-gray-600 px-6 py-4 rounded-lg mt-3"
-                  >
-                    {/* ido image for mobile */}
-                    <div className="md:hidden w-full flex flex-col items-center">
-                      <MobileProgressBar
-                        image={post.img}
-                        percentage={post.progress}
-                      />
-                      <div className="w-full flex flex-col items-center mt-2.5 mb-3">
-                        <h3 className="text-lg font-bold leading-5 text-white">
-                          {post.title}
-                        </h3>
-                        <PhoneIdoHeader className="self-center text-white mt-1.5 font-bold text-lg">
-                          {post.progress}%{" "}
-                          <span className="font-medium text-sm">sold</span>
-                        </PhoneIdoHeader>
-                      </div>
-                      <div className="w-full grid grid-cols-3 pt-3 border-t border-gray-700">
-                        <div className="flex flex-col items-center text-sm">
+                  <Links to={`/pools/${post.id}`}>
+                    <PoolItem
+                        key={post.id}
+                        className="relative focus:outline-none md:grid md:grid-cols-10 md:gap-x-2 cursor-pointer bg-gradient-to-b from-darkMode-800 to-darkMode-600 border border-gray-600 px-6 py-4 rounded-lg mt-3"
+                    >
+                      {/* ido image for mobile */}
+                      <div className="md:hidden w-full flex flex-col items-center">
+                        <MobileProgressBar
+                            image={post.img}
+                            percentage={post.progress}
+                            display={"hidden"}
+                        />
+                        <div className="w-full flex flex-col items-center mt-2.5 mb-3">
+                          <h3 className="text-lg font-bold leading-5 text-white">
+                            {post.title}
+                          </h3>
+                          <PhoneIdoHeader className="self-center text-white mt-1.5 font-bold text-lg">
+                            {post.progress}%{" "}
+                            <span className="font-medium text-sm">sold</span>
+                          </PhoneIdoHeader>
+                        </div>
+                        <div className="w-full grid grid-cols-3 pt-3 border-t border-gray-700">
+                          <div className="flex flex-col items-center text-sm">
                           <span className="md:hidden text-white text-opacity-90">
                             Access
                           </span>
-                          <span className="rounded-full py-1.5 text-white text-center inline-block leading-none">
+                            <span className="rounded-full py-1.5 text-white text-center inline-block leading-none">
                             BSC holder
                           </span>
-                        </div>
-                        <div className="flex flex-col items-center text-sm">
+                          </div>
+                          <div className="flex flex-col items-center text-sm">
                           <span className="md:hidden text-white text-opacity-90">
                             1BUSD
                           </span>
-                          <span className="rounded-full py-1.5 text-white text-center inline-block leading-none">
+                            <span className="rounded-full py-1.5 text-white text-center inline-block leading-none">
                             8303.00
                           </span>
-                        </div>
-                        <div className="flex flex-col items-center text-sm">
+                          </div>
+                          <div className="flex flex-col items-center text-sm">
                           <span className="md:hidden text-white text-opacity-90">
                             Total raise
                           </span>
-                          <span className="rounded-full py-1.5 text-orange-500 text-center inline-block leading-none">
+                            <span className="rounded-full py-1.5 text-orange-500 text-center inline-block leading-none">
                             200K
                           </span>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    {/* ido image for laptop */}
-                    <div className="hidden md:col-span-3 md:flex items-center md:space-x-4">
-                      <img
-                        className="md:inline-block rounded-full h-12"
-                        src={post.img}
-                        alt=""
-                      />
-                      <h3 className="mt-3 md:mt-0 text-base font-bold leading-5 text-white">
-                        {post.title}
-                      </h3>
-                    </div>
-                    <Status className="hidden md:flex lg:flex justify-between mt-4 md:mt-0 md:self-center md:mx-auto">
+                      {/* ido image for laptop */}
+                      <div className="hidden md:col-span-3 md:flex items-center md:space-x-4">
+                        <img
+                            className="md:inline-block rounded-full h-12"
+                            src={post.img}
+                            alt=""
+                        />
+                        <h3 className="mt-3 md:mt-0 text-base font-bold leading-5 text-white">
+                          {post.title}
+                        </h3>
+                      </div>
+                      <Status className="hidden md:flex lg:flex justify-between mt-4 md:mt-0 md:self-center md:mx-auto">
                       <span className="inline-block bg-gradient-to-t from-orange-500 to-orange-300 rounded-full px-2.5 py-1.5 text-white text-center w-min font-semibold text-xs leading-none">
-                        Soon
+                        Ongoing
                       </span>
-                    </Status>
-                    <div className="hidden md:flex justify-between mt-4 md:mt-0 md:self-center md:mx-auto">
+                      </Status>
+                      <div className="hidden md:flex justify-between mt-4 md:mt-0 md:self-center md:mx-auto">
                       <span className="md:hidden font-semibold text-white text-opacity-90">
                         Access
                       </span>
-                      <span className="rounded-full px-2.5 py-1.5 text-white text-center inline-block w-min font-semibold text-base leading-none">
+                        <span className="rounded-full px-2.5 py-1.5 text-white text-center inline-block w-min font-semibold text-base leading-none">
                         Private
                       </span>
-                    </div>
-                    <div className="hidden md:flex justify-between mt-4 md:mt-0 md:self-center md:mx-auto">
+                      </div>
+                      <div className="hidden md:flex justify-between mt-4 md:mt-0 md:self-center md:mx-auto">
                       <span className="md:hidden font-semibold text-white text-opacity-90">
                         Ratio, 1BUSD
                       </span>
-                      <span className="rounded-full px-2.5 py-1.5 text-white text-center inline-block w-min font-semibold text-base leading-none">
+                        <span className="rounded-full px-2.5 py-1.5 text-white text-center inline-block w-min font-semibold text-base leading-none">
                         8303.00
                       </span>
-                    </div>
-                    <div className="hidden md:flex justify-between mt-4 md:mt-0 md:self-center md:mx-auto">
+                      </div>
+                      <div className="hidden md:flex justify-between mt-4 md:mt-0 md:self-center md:mx-auto">
                       <span className="md:hidden font-semibold text-white text-opacity-90">
                         Total raise
                       </span>
-                      <span className="rounded-full px-2.5 py-1.5 text-orange-500 text-center inline-block w-min font-semibold text-base leading-none">
+                        <span className="rounded-full px-2.5 py-1.5 text-orange-500 text-center inline-block w-min font-semibold text-base leading-none">
                         200K
                       </span>
-                    </div>
+                      </div>
 
-                    <div className="hidden md:inline-block mt-6 mb-4 md:mt-0 md:mb-0 col-span-2 self-center">
-                      <ProgressBar progress={post.progress} display={"block"} />
-                    </div>
+                      <div className="hidden md:inline-block mt-6 mb-4 md:mt-0 md:mb-0 col-span-2 self-center">
+                        <ProgressBar progress={post.progress} display={"block"} />
+                      </div>
 
-                    <div className="hidden md:col-start-10 md:flex justify-end items-center">
-                      <Links
-                        className="text-orange-500 border border-orange-500 rounded-xl leading-none px-4 py-2.5"
-                        to={"/"}
-                      >
-                        Apply
-                      </Links>
-                    </div>
-                  </PoolItem>
+                      <div className="hidden md:col-start-10 md:flex justify-end items-center">
+                        <Links
+                            className="text-orange-500 border border-orange-500 rounded-xl leading-none px-4 py-2.5"
+                            to={"/"}
+                        >
+                          Apply
+                        </Links>
+                      </div>
+                    </PoolItem>
+                  </Links>
                 ))}
               </ul>
             </Tab.Panel>
