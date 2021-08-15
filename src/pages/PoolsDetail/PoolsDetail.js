@@ -17,8 +17,8 @@ const PoolsDetail = ({ darkMode, navigation }) => {
   const BSCAddress = "0x972C960384F60F4a3bfc33982bEC8Ce1F7E5f7Ee";
 
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="relative bg-darkMode-600 min-h-screen">
@@ -40,8 +40,22 @@ const PoolsDetail = ({ darkMode, navigation }) => {
               </PhoneIdoHeader>
               <Social />
               <JoinButtonContainer className="space-x-4">
-                <button className="bg-green-400 rounded-full px-5 py-2 font-medium focus:outline-none">
-                  Join pool
+                <button className="bg-green-400 rounded-full px-5 py-2 font-medium focus:outline-none flex items-center space-x-0.5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-4 w-4 inline-block"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 4v16m8-8H4"
+                    />
+                  </svg>
+                  <span className="inline-block">Join pool</span>
                 </button>
                 <button className="bg-yellow-400 text-gray-900 rounded-full px-5 py-2 font-medium focus:outline-none">
                   View bscscan
