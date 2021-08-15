@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from "../../components/layout/navBar";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import {
@@ -15,6 +15,10 @@ import Social from "./components/Social";
 
 const PoolsDetail = ({ darkMode, navigation }) => {
   const BSCAddress = "0x972C960384F60F4a3bfc33982bEC8Ce1F7E5f7Ee";
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div className="relative bg-darkMode-600 min-h-screen">
@@ -36,10 +40,10 @@ const PoolsDetail = ({ darkMode, navigation }) => {
               </PhoneIdoHeader>
               <Social />
               <JoinButtonContainer className="space-x-4">
-                <button className="bg-green-400 rounded-full px-5 py-2 font-medium">
+                <button className="bg-green-400 rounded-full px-5 py-2 font-medium focus:outline-none">
                   Join pool
                 </button>
-                <button className="bg-yellow-400 text-gray-900 rounded-full px-5 py-2 font-medium">
+                <button className="bg-yellow-400 text-gray-900 rounded-full px-5 py-2 font-medium focus:outline-none">
                   View bscscan
                 </button>
               </JoinButtonContainer>
