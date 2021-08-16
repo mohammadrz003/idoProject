@@ -3,6 +3,7 @@ import NavBar from "../../components/layout/navBar";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import {
   SummaryDetail,
+  RocketBackground,
   AddressInput,
   DetailWrapper,
   ImageSection,
@@ -12,8 +13,20 @@ import {
 import MobileProgressBar from "../AllPools/progress-bar/mobile-progressBar";
 import { PhoneIdoHeader } from "../AllPools/poolsItem.style";
 import Social from "./components/Social";
+import rocketDetailImg from "../../img/detail-rocket.svg";
+import JoinPoolModal from "./components/JoinPoolModal";
 
 const PoolsDetail = ({ darkMode, navigation }) => {
+  let [isOpen, setIsOpen] = useState(false);
+
+  function closeJoinPoolModal() {
+    setIsOpen(false);
+  }
+
+  function openJoinPoolModal() {
+    setIsOpen(true);
+  }
+
   const BSCAddress = "0x972C960384F60F4a3bfc33982bEC8Ce1F7E5f7Ee";
 
   useEffect(() => {
@@ -25,7 +38,7 @@ const PoolsDetail = ({ darkMode, navigation }) => {
       <div className="container mx-auto">
         <NavBar darkMode={darkMode} navigation={navigation} />
       </div>
-      <div className={"container mx-auto px-4 lg:px-14"}>
+      <div className={"relative container mx-auto px-4 lg:px-14"}>
         <DetailWrapper>
           <ImageSection className={"bg-darkMode-800"}>
             <div className="p-6 flex flex-col items-center w-full">
@@ -55,11 +68,12 @@ const PoolsDetail = ({ darkMode, navigation }) => {
                       d="M12 4v16m8-8H4"
                     />
                   </svg>
-                  <span className="inline-block">Join pool</span>
+                  <span onClick={openJoinPoolModal} className="inline-block">Join pool</span>
                 </button>
                 <button className="bg-yellow-400 text-gray-900 rounded-full px-5 py-2 font-medium focus:outline-none">
                   View bscscan
                 </button>
+                <JoinPoolModal isOpen={isOpen} setIsOpen={setIsOpen} />
               </JoinButtonContainer>
             </div>
             <div className="p-6 flex flex-col items-center w-full border-t border-gray-700 text-sm">

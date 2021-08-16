@@ -1,0 +1,4 @@
+.DisableRadialBorder {
+  box-shadow: 2px 2px 0px 0px #3d3d3d, -2px -2px 0px 0px #3d3d3d,
+    -2px 2px 0px 0px #3d3d3d, 2px -2px 0px 0px #3d3d3d;
+}

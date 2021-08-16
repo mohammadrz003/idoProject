@@ -15,6 +15,14 @@ export const DetailWrapper = styled.div`
   `}
 `;
 
+export const RocketBackground = styled.img`
+  position: absolute;
+  width: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
+
 export const ImageSection = styled.div`
   position: static;
   display: flex;
