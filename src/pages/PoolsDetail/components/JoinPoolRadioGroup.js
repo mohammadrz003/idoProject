@@ -5,10 +5,10 @@ import RadialStyle from "../style/RadialGroup.module.css";
 
 const plans = [
   {
-    name: "Class Only",
+    name: "Silver Plan",
   },
   {
-    name: "Class + 1 on 1 Training",
+    name: "Gold Plan",
   },
 ];
 

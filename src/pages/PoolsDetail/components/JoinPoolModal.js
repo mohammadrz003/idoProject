@@ -1,6 +1,10 @@
 import { Dialog, Transition } from "@headlessui/react";
 import React, { Fragment, useState } from "react";
-import { JoinModal, JoinNowButton, PoolInputValue } from "../style/JoinPoolModal.style";
+import {
+  JoinModal,
+  JoinNowButton,
+  PoolInputValue,
+} from "../style/JoinPoolModal.style";
 import JoinPoolRadioGroup from "./JoinPoolRadioGroup";
 
 const JoinPoolModal = ({ isOpen, setIsOpen }) => {
@@ -50,19 +54,26 @@ const JoinPoolModal = ({ isOpen, setIsOpen }) => {
                   as="h3"
                   className="text-2xl font-semibold leading-6"
                 >
-                  Buy your Spot in Class
+                  Buy your token right now
                 </Dialog.Title>
                 <div className="mt-2">
                   <p className="text-base text-gray-300 font-medium">
-                    Limited spots available.
+                    some plans available.
                   </p>
                 </div>
 
-                <JoinPoolRadioGroup/>
-                <p className="text-gray-400 text-xs mb-2">Secure Checkout Powered by Stripe</p>
+                <JoinPoolRadioGroup />
+                <p className="text-gray-400 text-xs mb-2">
+                Enter your purchase amount
+                </p>
 
-                <PoolInputValue placeholder="Purchase amount"/>
-                <JoinNowButton className="text-lg font-semibold mt-2 rounded" type="button">Join Now</JoinNowButton>
+                <PoolInputValue placeholder="Purchase amount" />
+                <JoinNowButton
+                  className="text-lg font-semibold mt-2 rounded"
+                  type="button"
+                >
+                  Join Now
+                </JoinNowButton>
               </JoinModal>
             </Transition.Child>
           </div>
