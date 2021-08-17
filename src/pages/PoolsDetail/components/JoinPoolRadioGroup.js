@@ -27,9 +27,9 @@ export default function JoinPoolRadioGroup() {
                   key={plan.name}
                   value={plan}
                   className={({ active, checked }) =>
-                    `${active ? "bg-darkMode-900" : ""}
-                  ${checked ? `text-white` : `bg-darkMode-900 ${RadialStyle.DisableRadialBorder}`}
-                    relative rounded shadow-md px-5 py-4 cursor-pointer flex focus:outline-none bg-darkMode-900`
+                    `${active ? "bg-darkMode-800" : ""}
+                  ${checked ? `text-white` : `bg-darkMode-800 ${RadialStyle.DisableRadialBorder}`}
+                    relative rounded shadow-md px-5 py-4 cursor-pointer flex focus:outline-none bg-darkMode-800`
                   }
                 >
                   {({ active, checked }) => (

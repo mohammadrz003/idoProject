@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "../../components/layout/navBar";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import Countdown from "react-countdown";
 import {
   SummaryDetail,
   RocketBackground,
@@ -28,6 +29,8 @@ const PoolsDetail = ({ darkMode, navigation }) => {
     setIsOpen(true);
   }
 
+  const Completionist = () => <span className="inline-block">Closed</span>;
+
   const BSCAddress = "0x972C960384F60F4a3bfc33982bEC8Ce1F7E5f7Ee";
 
   useEffect(() => {
@@ -36,7 +39,7 @@ const PoolsDetail = ({ darkMode, navigation }) => {
 
   return (
     <div className="relative bg-darkMode-600 min-h-screen">
-      <ModalBlackBackground className={`${isOpen ? "inline" : "hidden"}`}/>
+      <ModalBlackBackground className={`${isOpen ? "inline" : "hidden"}`} />
       <div className="container mx-auto">
         <NavBar darkMode={darkMode} navigation={navigation} />
       </div>
@@ -45,7 +48,7 @@ const PoolsDetail = ({ darkMode, navigation }) => {
           <ImageSection className={"bg-darkMode-800"}>
             <div className="p-6 flex flex-col items-center w-full">
               <MobileProgressBar
-                image={"/image/coins/dotmoovs.jpg"}
+                image={"/image/coins/dragon.jpg"}
                 percentage={"30"}
                 display={"inline-block"}
               />
@@ -70,7 +73,9 @@ const PoolsDetail = ({ darkMode, navigation }) => {
                       d="M12 4v16m8-8H4"
                     />
                   </svg>
-                  <span onClick={openJoinPoolModal} className="inline-block">Join pool</span>
+                  <span onClick={openJoinPoolModal} className="inline-block">
+                    Join pool
+                  </span>
                 </button>
                 <button className="bg-yellow-400 text-gray-900 rounded-full px-5 py-2 font-medium focus:outline-none">
                   View bscscan
@@ -112,7 +117,11 @@ const PoolsDetail = ({ darkMode, navigation }) => {
               <SummaryDetail>
                 <span className="inline-block">Closed in</span>
                 <div className="flex items-center">
-                  <span>23:59:13</span>
+                  <span>
+                    <Countdown date={Date.now() + 200000}>
+                      <Completionist />
+                    </Countdown>
+                  </span>
                 </div>
               </SummaryDetail>
             </div>
