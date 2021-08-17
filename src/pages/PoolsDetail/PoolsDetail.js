@@ -15,6 +15,7 @@ import { PhoneIdoHeader } from "../AllPools/poolsItem.style";
 import Social from "./components/Social";
 import rocketDetailImg from "../../img/detail-rocket.svg";
 import JoinPoolModal from "./components/JoinPoolModal";
+import { ModalBlackBackground } from "./style/JoinPoolModal.style";
 
 const PoolsDetail = ({ darkMode, navigation }) => {
   let [isOpen, setIsOpen] = useState(false);
@@ -35,6 +36,7 @@ const PoolsDetail = ({ darkMode, navigation }) => {
 
   return (
     <div className="relative bg-darkMode-600 min-h-screen">
+      <ModalBlackBackground className={`${isOpen ? "inline" : "hidden"}`}/>
       <div className="container mx-auto">
         <NavBar darkMode={darkMode} navigation={navigation} />
       </div>

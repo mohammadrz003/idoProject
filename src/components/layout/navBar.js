@@ -9,6 +9,7 @@ import metaMaskImg from "../../img/Metamask-logo-blanc.png";
 import safepalImg from "../../img/safepal.png";
 import coin98Img from "../../img/coin98.png";
 import walletConnectImg from "../../img/walletconnect.png";
+import { ModalBlackBackground } from "../../pages/PoolsDetail/style/JoinPoolModal.style";
 
 const NavBar = ({ darkMode, navigation }) => {
   let [isOpen, setIsOpen] = useState(false);
@@ -33,6 +34,7 @@ const NavBar = ({ darkMode, navigation }) => {
 
   return (
     <>
+      <ModalBlackBackground className={`${isOpen||isShow ? "inline" : "hidden"}`} />
       {/* opean wallet modal */}
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog

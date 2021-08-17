@@ -9,6 +9,7 @@ import NavBar from "../../components/layout/navBar";
 import PoolsList from "./poolsList";
 import StarsParticles from "./starsParticles";
 import spaceMan from "../../img/spaceman.svg";
+import { ModalBlackBackground } from "../PoolsDetail/style/JoinPoolModal.style";
 
 const navigation = [
   { name: "Marketplace", href: "#" },

@@ -1,5 +1,16 @@
 import styled from "styled-components";
 
+export const ModalBlackBackground = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.6;
+  z-index: 40;
+`;
+
 export const JoinModal = styled.div`
   background-color: #222421;
   color: #ffffff;
