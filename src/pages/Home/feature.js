@@ -8,7 +8,7 @@ import experianceImgDark from '../../img/user-dark.png';
 
 const Feature = ({darkMode}) => {
     return (
-        <section className="bg-light-100 dark:bg-darkMode-400">
+        <section className="bg-light-100 dark:bg-darkMode-600">
             <div className="flex flex-col items-center space-y-8 px-4 sm:flex-row sm:justify-around container mx-auto xl:px-20 md:px-2 sm:px-4 py-20">
                 <div className="flex flex-col max-w-xxs items-center lg:max-w-xxs md:max-w-xsm">
                     <img className="w-12" src={darkMode === "dark" ? securityImgDark : securityImg} alt="" />
