@@ -40,7 +40,7 @@ export const ImageSection = styled.div`
 
 export const ListSection = styled.div`
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 3rem;
 
   ${mediaQueries("lg")`
     width: 66%;

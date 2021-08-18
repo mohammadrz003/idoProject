@@ -128,14 +128,14 @@ const PoolsDetail = ({ darkMode, navigation }) => {
           </ImageSection>
 
           <ListSection>
-            <div className="bg-darkMode-800 px-6 py-5 mb-3 rounded-lg">
+            <div className="bg-darkMode-800 px-6 py-5 mb-6 rounded-lg">
               <h4 className="font-semibold text-lg mb-3 pl-3 flex items-center space-x-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke="#ffffff"
+                  stroke="#48cae4"
                 >
                   <path
                     strokeLinecap="round"
@@ -165,14 +165,14 @@ const PoolsDetail = ({ darkMode, navigation }) => {
                 </li>
               </ul>
             </div>
-            <div className="bg-darkMode-800 px-6 py-5 mb-3 rounded-lg">
+            <div className="bg-darkMode-800 px-6 py-5 mb-6 rounded-lg">
               <h4 className="font-semibold text-lg mb-3 pl-3 flex items-center space-x-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke="#ffffff"
+                  stroke="#48cae4"
                 >
                   <path
                     strokeLinecap="round"
@@ -209,7 +209,7 @@ const PoolsDetail = ({ darkMode, navigation }) => {
                   class="icon icon-tabler icon-tabler-bulb w-6"
                   viewBox="0 0 24 24"
                   stroke-width="1.8"
-                  stroke="#ffffff"
+                  stroke="#ffd100"
                   fill="none"
                   stroke-linecap="round"
                   stroke-linejoin="round"
