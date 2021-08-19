@@ -7,56 +7,29 @@ import {
   ProgressRocket,
   ProgressWrapper,
   RocketBox,
+  GradientBackground,
+  TransparentBackground,
 } from "./progress.style";
 import styled from "styled-components";
 import rocketImg from "../../../img/progress-rocket.svg";
 import { Waypoint } from "react-waypoint";
 
-const GradientBackground = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 119px;
-  height: 119px;
-  border-radius: 50%;
-  background: rgb(241, 145, 67);
-  background: linear-gradient(
-    312deg,
-    rgba(241, 145, 67, 1) 0%,
-    rgba(255, 119, 61, 1) 50%,
-    rgba(245, 85, 54, 1) 100%
-  );
-`;
-
-const TransparentBackground = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 104px;
-  height: 104px;
-  border-radius: 50%;
-  background-color: #292c36;
-  z-index: 3;
-`;
-
-const MobileProgressBar = ({ image, percentage, display }) => {
+const MobileProgressBar = ({ image, percentage, display, darkMode }) => {
   const [idoPercent, setIdoPercent] = useState(0);
 
   return (
-    <Waypoint onEnter={()=> setIdoPercent(percentage)}>
+    <Waypoint onEnter={() => setIdoPercent(percentage)}>
       <ProgressWrapper className={`md:${display}`}>
         <RocketBox percent={idoPercent}>
           <ProgressRocket src={rocketImg} />
         </RocketBox>
 
         <CircleBox>
-          <TransparentBackground />
+          <TransparentBackground darkMode={darkMode} />
           <GradientBackground />
           <IdoImg src={image} />
-          <SemiCircle percent={idoPercent} />
-          <SemiCircleTwo percent={idoPercent} />
+          <SemiCircle percent={idoPercent} darkMode={darkMode} />
+          <SemiCircleTwo percent={idoPercent} darkMode={darkMode} />
         </CircleBox>
       </ProgressWrapper>
     </Waypoint>

@@ -20,7 +20,7 @@ function App() {
         <div className={`${useDarkMode}`}>
             <BrowserRouter>
                 <Switch>
-                    <Route path={'/pools/:poolId'} component={() => <PoolsDetailLayout/>}/>
+                    <Route path={'/pools/:poolId'} component={() => <PoolsDetailLayout darkMode={useDarkMode}/>}/>
                     <Route path={'/pools'} component={() => <AllPoolsLayout darkMode={useDarkMode}/>}/>
                     <Route path={'/'} component={() => <HomeLayout useDarkMode={useDarkMode}/>}/>
                 </Switch>

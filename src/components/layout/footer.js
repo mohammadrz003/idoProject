@@ -5,7 +5,6 @@ import { Switch } from "@headlessui/react";
 
 const Footer = ({ darkMode, setDark }) => {
   const getLocalMode = window.localStorage.getItem("theme");
-  console.log(getLocalMode)
   const [enabled, setEnabled] = useState(getLocalMode === 'dark' ? true : false);
 
   return (

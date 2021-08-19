@@ -1,5 +1,5 @@
 import React from "react";
-import Classes from "../style/cardStyle.module.css";
+import { ProgressFire, ProgressPercent } from "../style/cardStyle.style";
 
 const ProgressBar = ({ progress, display }) => {
   return (
@@ -8,11 +8,11 @@ const ProgressBar = ({ progress, display }) => {
         style={{ width: `${progress}%` }}
         className="absolute top-0 left-0 h-full rounded-md inline-block bg-gradient-to-r from-orange-500 to-orange-300"
       />
-      <span style={{left: `${progress}%`}} className={`${display} ${Classes.progressPercent} absolute bottom-2 text-sm text-white`}>70%</span>
+      <ProgressPercent style={{left: `${progress}%`}} className={`${display} absolute bottom-2 text-sm text-white`}>70%</ProgressPercent>
 
-      <svg
+      <ProgressFire
         style={{ left: `${progress}%` }}
-        className={`absolute z-50 top-0 ${Classes.progressFire}`}
+        className={`absolute z-50 top-0`}
         viewBox="0 0 58 52"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +71,7 @@ const ProgressBar = ({ progress, display }) => {
             <stop offset="1" stop-color="#D01F5C"></stop>
           </linearGradient>
         </defs>
-      </svg>
+      </ProgressFire>
     </div>
   );
 };

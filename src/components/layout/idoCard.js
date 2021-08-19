@@ -1,31 +1,33 @@
 import React from "react";
-import CardStyle from "../style/cardStyle.module.css";
+import {PoolTitle} from "../style/cardStyle.style";
 import ProgressBar from "./progressBar";
 
-const IdoCard = () => {
+const IdoCard = ({useDarkMode}) => {
   let progress = "70";
   let { sale, total } = {
     sale: "54000",
     total: "68000",
   };
+
   let idoCartItem = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   return (
-    <div className="dark:bg-darkMode-600">
+    <div className="bg-gray-100 dark:bg-darkMode-600">
       <div className="container mx-auto py-24 xl:px-20 md:px-7 lg:py-28 flex flex-col">
         <div className="text-center">
-          <h2
-            className={`dark:text-darkMode-100 leading-none relative inline-block text-center font-bold text-secondery-300 text-3xl ${CardStyle.poolTitle}`}
+          <PoolTitle
+            useDarkMode={useDarkMode}
+            className={`dark:text-white leading-none relative inline-block text-center font-bold text-secondery-300 text-3xl`}
           >
             <span className="relative z-10">Featured Pools</span>
-          </h2>
+          </PoolTitle>
         </div>
         <section className="mt-14 grid px-4 gap-y-8 lg:grid-cols-3 lg:gap-11 md:grid-cols-2 md:gap-9 sm:grid-cols-1 sm:gap-y-12 sm:px-6">
           {/* card items go here */}
           {idoCartItem.map((item) => {
             return (
               <div
-                className={`transform lg:hover:scale-105 duration-300 rounded-3xl p-6 cursor-pointer border border-gray-300 dark:bg-darkMode-800 dark:border-gray-700 dark:hover:border-yellow-300 hover:border-primary-300`}
+                className={`bg-white transform lg:hover:scale-105 duration-300 rounded-3xl p-6 cursor-pointer border border-gray-300 dark:bg-darkMode-800 dark:border-gray-700 dark:hover:border-yellow-300 hover:border-primary-300`}
               >
                 <div className="flex justify-between items-center">
                   <img
