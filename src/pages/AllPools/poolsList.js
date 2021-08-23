@@ -180,6 +180,7 @@ const PoolsList = (props) => {
                       {/* ido image for mobile */}
                       <div className="md:hidden w-full flex flex-col items-center">
                         <MobileProgressBar
+                            poolsPage={true}
                             darkMode={props.darkMode}
                             image={post.img}
                             percentage={post.progress}

@@ -14,7 +14,7 @@ import styled from "styled-components";
 import rocketImg from "../../../img/progress-rocket.svg";
 import { Waypoint } from "react-waypoint";
 
-const MobileProgressBar = ({ image, percentage, display, darkMode }) => {
+const MobileProgressBar = ({ image, percentage, display, darkMode, poolsPage }) => {
   const [idoPercent, setIdoPercent] = useState(0);
 
   return (
@@ -25,7 +25,7 @@ const MobileProgressBar = ({ image, percentage, display, darkMode }) => {
         </RocketBox>
 
         <CircleBox>
-          <TransparentBackground darkMode={darkMode} />
+          <TransparentBackground darkMode={darkMode} poolsPage={poolsPage} />
           <GradientBackground />
           <IdoImg src={image} />
           <SemiCircle percent={idoPercent} darkMode={darkMode} />

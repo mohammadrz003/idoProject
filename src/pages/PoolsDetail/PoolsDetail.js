@@ -53,7 +53,7 @@ const PoolsDetail = ({ darkMode, navigation }) => {
                 "border-2 border-gray-200 dark:border-opacity-0 bg-white dark:bg-darkMode-800"
               }
             >
-              <div className="p-6 flex flex-col items-center w-full">
+              <div className="p-4 flex flex-col items-center w-full">
                 <MobileProgressBar
                   darkMode={darkMode}
                   image={"/image/coins/dragon.jpg"}
@@ -96,7 +96,7 @@ const PoolsDetail = ({ darkMode, navigation }) => {
                   <JoinPoolModal isOpen={isOpen} setIsOpen={setIsOpen} />
                 </JoinButtonContainer>
               </div>
-              <div className="p-6 flex flex-col items-center w-full border-t border-gray-200 dark:border-gray-700 text-sm">
+              <div className="p-4 flex flex-col items-center w-full border-t border-gray-200 dark:border-gray-700 text-sm">
                 <SummaryDetail>
                   <span className="inline-block text-gray-800 dark:text-white">
                     Address
@@ -150,7 +150,7 @@ const PoolsDetail = ({ darkMode, navigation }) => {
             </ImageSection>
 
             <ListSection>
-              <div className="bg-white border-2 border-gray-200 dark:border-opacity-0 dark:bg-darkMode-800 px-6 py-5 mb-6 rounded-lg">
+              <div className="bg-white border-2 border-gray-200 dark:border-opacity-0 dark:bg-darkMode-800 px-4 py-5 mb-6 rounded-lg">
                 <h4 className="font-semibold text-lg mb-3 pl-3 flex items-center space-x-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -189,7 +189,7 @@ const PoolsDetail = ({ darkMode, navigation }) => {
                   </li>
                 </ul>
               </div>
-              <div className="bg-white border-2 border-gray-200 dark:border-opacity-0 dark:bg-darkMode-800 px-6 py-5 mb-6 rounded-lg">
+              <div className="bg-white border-2 border-gray-200 dark:border-opacity-0 dark:bg-darkMode-800 px-4 py-5 mb-6 rounded-lg">
                 <h4 className="font-semibold text-lg mb-3 pl-3 flex items-center space-x-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -228,7 +228,7 @@ const PoolsDetail = ({ darkMode, navigation }) => {
                   </li>
                 </ul>
               </div>
-              <div className="bg-white border-2 border-gray-200 dark:border-opacity-0 dark:bg-darkMode-800 px-6 py-5 rounded-lg">
+              <div className="bg-white border-2 border-gray-200 dark:border-opacity-0 dark:bg-darkMode-800 px-4 py-5 rounded-lg">
                 <h4 className="font-semibold text-lg mb-3 pl-3 flex items-center space-x-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

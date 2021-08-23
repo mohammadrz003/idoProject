@@ -126,6 +126,6 @@ export const TransparentBackground = styled.div`
   height: 104px;
   border-radius: 50%;
   background-color: ${(props) =>
-    props.darkMode === "dark" ? "#141A34" : "#ffffff"};
+    props.darkMode === "dark" || props.poolsPage ? "#141A34" : "#ffffff"};
   z-index: 3;
 `;
