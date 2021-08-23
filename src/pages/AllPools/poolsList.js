@@ -9,15 +9,16 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function PoolsList(props) {
-  
+const PoolsList = (props) => {
+
+  console.log(`dark mode is = ${props.darkMode}`)
 
   let [categories] = useState({
     Ongoing: [
       {
         id: 1,
         title: "Dotmoovs BNB",
-        img: "image/coins/dotmoovs.jpg",
+        img: "image/coins/ethermoon.jpg",
         progress: 75,
         date: "5h ago",
         commentCount: 5,
@@ -35,7 +36,7 @@ export default function PoolsList(props) {
       {
         id: 1,
         title: "Dotmoovs BNB",
-        img: "image/coins/dotmoovs.jpg",
+        img: "image/coins/ethermoon.jpg",
         progress: 21,
         date: "5h ago",
         commentCount: 5,
@@ -53,7 +54,7 @@ export default function PoolsList(props) {
       {
         id: 1,
         title: "Dotmoovs BNB",
-        img: "image/coins/dotmoovs.jpg",
+        img: "image/coins/ethermoon.jpg",
         progress: 56,
         date: "5h ago",
         commentCount: 5,
@@ -71,7 +72,7 @@ export default function PoolsList(props) {
       {
         id: 1,
         title: "Dotmoovs BNB",
-        img: "image/coins/dotmoovs.jpg",
+        img: "image/coins/ethermoon.jpg",
         progress: 83,
         date: "5h ago",
         commentCount: 5,
@@ -91,7 +92,7 @@ export default function PoolsList(props) {
       {
         id: 1,
         title: "Dotmoovs BNB",
-        img: "image/coins/dotmoovs.jpg",
+        img: "image/coins/ethermoon.jpg",
         progress: 75,
         date: "5h ago",
         commentCount: 5,
@@ -111,7 +112,7 @@ export default function PoolsList(props) {
       {
         id: 1,
         title: "Dotmoovs BNB",
-        img: "image/coins/dotmoovs.jpg",
+        img: "image/coins/ethermoon.jpg",
         progress: 75,
         date: "5h ago",
         commentCount: 5,
@@ -129,7 +130,7 @@ export default function PoolsList(props) {
       {
         id: 1,
         title: "Dotmoovs BNB",
-        img: "image/coins/dotmoovs.jpg",
+        img: "image/coins/ethermoon.jpg",
         progress: 75,
         date: "5h ago",
         commentCount: 5,
@@ -179,6 +180,7 @@ export default function PoolsList(props) {
                       {/* ido image for mobile */}
                       <div className="md:hidden w-full flex flex-col items-center">
                         <MobileProgressBar
+                            darkMode={props.darkMode}
                             image={post.img}
                             percentage={post.progress}
                             display={"hidden"}
@@ -283,3 +285,5 @@ export default function PoolsList(props) {
     </div>
   );
 }
+
+export default PoolsList;

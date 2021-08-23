@@ -77,7 +77,7 @@ const ViewAllPools = ({ darkMode, landingContainerWidth, navJustify }) => {
 
         <div className="bg-darkMode-800">
           <div className="container mx-auto px-3">
-            <PoolsList />
+            <PoolsList darkMode={darkMode} />
           </div>
         </div>
         <ToastContainer />
