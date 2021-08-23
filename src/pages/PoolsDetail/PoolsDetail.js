@@ -40,13 +40,13 @@ const PoolsDetail = ({ darkMode, navigation }) => {
   }, []);
 
   return (
-    <div className="relative dark:bg-darkMode-600 min-h-screen">
+    <div className="relative dark:bg-darkMode-600">
       <ModalBlackBackground className={`${isOpen ? "inline" : "hidden"}`} />
       <div className="container mx-auto">
         <NavBar darkMode={darkMode} navigation={navigation} />
       </div>
       <section className="bg-gray-100 dark:bg-darkMode-600">
-        <div className={"relative container mx-auto px-4 lg:px-14"}>
+        <div className={"relative container mx-auto px-4 lg:px-14 mt-6"}>
           <DetailWrapper>
             <ImageSection
               className={

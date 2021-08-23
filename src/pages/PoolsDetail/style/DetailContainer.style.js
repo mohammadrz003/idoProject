@@ -6,8 +6,7 @@ export const DetailWrapper = styled.div`
   color: white;
   display: flex;
   flex-direction: column;
-  margin-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding: 1.2rem 0;
 
   ${mediaQueries("lg")`
     flex-direction: row;
