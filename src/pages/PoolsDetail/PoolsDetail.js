@@ -69,7 +69,7 @@ const PoolsDetail = ({ darkMode, navigation }) => {
                 >
                   {46}% <span className="font-medium text-sm">sold</span>
                 </PhoneIdoHeader>
-                <Social />
+                <Social darkMode={darkMode} />
                 <JoinButtonContainer className="space-x-4">
                   <button className="bg-green-400 rounded-full px-5 py-2 font-medium focus:outline-none flex items-center space-x-0.5">
                     <svg

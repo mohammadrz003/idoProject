@@ -1,8 +1,8 @@
-const Social = () => {
+const Social = ({darkMode}) => {
   return (
     <div className="w-full flex justify-center space-x-3 mt-4">
       <div
-        style={{ backgroundColor: "#424242" }}
+        style={{ backgroundColor: `${darkMode === "dark" ? "#424242" : "#EEF0F3"}`}}
         className="w-6 box-content p-1.5 rounded-full"
       >
         <svg
@@ -10,7 +10,7 @@ const Social = () => {
           class="icon icon-tabler icon-tabler-world w-full"
           viewBox="0 0 24 24"
           stroke-width="1.5"
-          stroke="#9E9E9E"
+          stroke={`${darkMode === "dark" ? "#9E9E9E" : "#435152"}`}
           fill="none"
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -24,7 +24,7 @@ const Social = () => {
         </svg>
       </div>
       <div
-        style={{ backgroundColor: "#424242" }}
+        style={{ backgroundColor: `${darkMode === "dark" ? "#424242" : "#EEF0F3"}`}}
         className="w-6 box-content p-1.5 rounded-full"
       >
         <svg
@@ -32,7 +32,7 @@ const Social = () => {
           class="icon icon-tabler icon-tabler-brand-twitter w-full"
           viewBox="0 0 24 24"
           stroke-width="1.5"
-          stroke="#9E9E9E"
+          stroke={`${darkMode === "dark" ? "#9E9E9E" : "#435152"}`}
           fill="none"
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -42,7 +42,7 @@ const Social = () => {
         </svg>
       </div>
       <div
-        style={{ backgroundColor: "#424242" }}
+        style={{ backgroundColor: `${darkMode === "dark" ? "#424242" : "#EEF0F3"}`}}
         className="w-6 box-content p-1.5 rounded-full"
       >
         <svg
@@ -50,7 +50,7 @@ const Social = () => {
           class="icon icon-tabler icon-tabler-brand-telegram w-full"
           viewBox="0 0 24 24"
           stroke-width="1.5"
-          stroke="#9E9E9E"
+          stroke={`${darkMode === "dark" ? "#9E9E9E" : "#435152"}`}
           fill="none"
           stroke-linecap="round"
           stroke-linejoin="round"

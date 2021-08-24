@@ -28,8 +28,8 @@ const MobileProgressBar = ({ image, percentage, display, darkMode, poolsPage }) 
           <TransparentBackground darkMode={darkMode} poolsPage={poolsPage} />
           <GradientBackground />
           <IdoImg src={image} />
-          <SemiCircle percent={idoPercent} darkMode={darkMode} />
-          <SemiCircleTwo percent={idoPercent} darkMode={darkMode} />
+          <SemiCircle percent={idoPercent} darkMode={darkMode} poolsPage={poolsPage} />
+          <SemiCircleTwo percent={idoPercent} darkMode={darkMode} poolsPage={poolsPage} />
         </CircleBox>
       </ProgressWrapper>
     </Waypoint>

@@ -61,7 +61,7 @@ export const SemiCircle = styled.div`
     width: 120px;
     height: 120px;
     border: 8px solid;
-    border-color: ${(props) => props.darkMode === "dark" ? "#495057 transparent transparent #495057" : "#bfc0c0 transparent transparent #bfc0c0"};
+    border-color: ${(props) => props.darkMode === "dark" || props.poolsPage ? "#495057 transparent transparent #495057" : "#bfc0c0 transparent transparent #bfc0c0"};
     border-radius: 50%;
     transform: rotate(calc(1deg * (-45 + (var(--percentage) * 1.8))));
     transition-property: all;
@@ -89,7 +89,7 @@ export const SemiCircleTwo = styled.div`
     width: 120px;
     height: 120px;
     border: 8px solid;
-    border-color: ${(props) => props.darkMode === "dark" ? "transparent #495057 #495057 transparent" : "transparent #bfc0c0 #bfc0c0 transparent"};
+    border-color: ${(props) => props.darkMode === "dark" || props.poolsPage ? "transparent #495057 #495057 transparent" : "transparent #bfc0c0 #bfc0c0 transparent"};
     border-radius: 50%;
     transform: translate(-50%, 0)
       rotate(calc(1deg * (-45 + (var(--percentage) * 1.8))));
