@@ -1,8 +1,17 @@
 import React from "react";
-import {PoolTitle} from "../style/cardStyle.style";
-import ProgressBar from "./progressBar";
+import { PoolTitle } from "../style/cardStyle.style";
+import styled from "styled-components";
+import MobileProgressBar from "./homeProgressbar/mobile-progressBar";
 
-const IdoCard = ({useDarkMode}) => {
+export const HomeIdoHeaderPercent = styled.p`
+  background: rgb(14, 210, 247);
+  background: #10b981;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`;
+
+const IdoCard = ({ useDarkMode }) => {
   let progress = "70";
   let { sale, total } = {
     sale: "54000",
@@ -30,10 +39,11 @@ const IdoCard = ({useDarkMode}) => {
                 className={`bg-white transform lg:hover:scale-105 duration-300 rounded-3xl p-6 cursor-pointer border border-gray-300 dark:bg-darkMode-800 dark:border-gray-700 dark:hover:border-yellow-300 hover:border-primary-300`}
               >
                 <div className="flex justify-between items-center">
-                  <img
-                    className="h-12 w-auto"
-                    src="https://imm.ltd/images/coin.svg"
-                    alt=""
+                  <MobileProgressBar
+                    darkMode={useDarkMode}
+                    image={"/image/coins/dragon.jpg"}
+                    percentage={"30"}
+                    display={"inline-block"}
                   />
                   <div className="flex items-center bg-green-200 dark:bg-green-300 rounded-full px-2 py-1 space-x-1">
                     <span className="inline-block w-2 h-2 bg-green-400 dark:bg-green-500 rounded-full" />
@@ -42,33 +52,22 @@ const IdoCard = ({useDarkMode}) => {
                     </span>
                   </div>
                 </div>
-                <p className="font-semibold text-secondery-300 dark:text-darkMode-100 mt-4 text-2xl mb-0.5">
+                <p className="font-semibold text-secondery-300 dark:text-darkMode-100 mt-2 text-2xl mb-0.5">
                   OpenOcean
                 </p>
-                <p className="font-semibold text-sm text-green-500">
-                  BLP / BNB
-                </p>
+                <HomeIdoHeaderPercent
+                  className="self-center text-white mt-1.5 font-bold text-lg"
+                  darkMode={useDarkMode}
+                >
+                  {46}% <span className="font-medium text-sm">sold</span>
+                </HomeIdoHeaderPercent>
                 <p className="mt-4 font-semibold text-sm dark:text-white dark:text-opacity-80">
                   Ratio per 1 BNB
                 </p>
                 <div className="font-bold text-yellow-400 text-xl">
                   1816.67 FARA
                 </div>
-                <p className="mt-4 mb-1 font-semibold text-sm dark:text-white dark:text-opacity-80">
-                  Progress
-                </p>
 
-                {/*progress line*/}
-                <ProgressBar progress={progress} display={"hidden"} />
-
-                <div className="flex justify-between mt-1">
-                  <span className="font-medium text-sm dark:text-white dark:text-opacity-80">
-                    {progress}%
-                  </span>
-                  <span className="font-medium text-sm text-green-500">
-                    {sale} / {total}
-                  </span>
-                </div>
                 <div className="flex flex-wrap justify-between mt-4 pt-4 border-t border-gray-300 dark:border-darkMode-500">
                   <p className="flex flex-col">
                     <span className="font-medium text-sm dark:text-white dark:text-opacity-80">
@@ -102,6 +101,6 @@ const IdoCard = ({useDarkMode}) => {
       </div>
     </div>
   );
-}
+};
 
 export default IdoCard;

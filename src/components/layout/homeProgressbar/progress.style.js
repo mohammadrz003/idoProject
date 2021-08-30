@@ -11,8 +11,8 @@ export const RocketBox = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  width: 120px;
-  height: 120px;
+  width: 72px;
+  height: 72px;
   transform: rotate(${(props) => props.percent * 3.6}deg);
   z-index: 20;
   transition-property: all;
@@ -21,15 +21,15 @@ export const RocketBox = styled.div`
 `;
 
 export const ProgressRocket = styled.img`
-  transform: translate(0, -6px) rotate(90deg);
-  width: 14px;
+  transform: translate(0, -3.5px) rotate(90deg);
+  width: 8px;
   z-index: 20;
 `;
 
 export const CircleBox = styled.div`
   position: relative;
-  width: 120px;
-  height: 120px;
+  width: 72px;
+  height: 72px;
 `;
 
 export const IdoImg = styled.img`
@@ -57,9 +57,9 @@ export const SemiCircle = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    width: 120px;
-    height: 120px;
-    border: 8px solid;
+    width: 72px;
+    height: 72px;
+    border: 5px solid;
     border-color: ${(props) => props.darkMode === "dark" || props.poolsPage ? "#495057 transparent transparent #495057" : "#bfc0c0 transparent transparent #bfc0c0"};
     border-radius: 50%;
     transform: rotate(calc(1deg * (-45 + (var(--percentage) * 1.8))));
@@ -85,9 +85,9 @@ export const SemiCircleTwo = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    width: 120px;
-    height: 120px;
-    border: 8px solid;
+    width: 72px;
+    height: 72px;
+    border: 5px solid;
     border-color: ${(props) => props.darkMode === "dark" || props.poolsPage ? "transparent #495057 #495057 transparent" : "transparent #bfc0c0 #bfc0c0 transparent"};
     border-radius: 50%;
     transform: translate(-50%, 0)
@@ -104,8 +104,8 @@ export const GradientBackground = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 119px;
-  height: 119px;
+  width: 71px;
+  height: 71px;
   border-radius: 50%;
   background: rgb(241, 145, 67);
   background: linear-gradient(
@@ -121,8 +121,8 @@ export const TransparentBackground = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 104px;
-  height: 104px;
+  width: 63px;
+  height: 63px;
   border-radius: 50%;
   background-color: ${(props) =>
     props.darkMode === "dark" || props.poolsPage ? "#141A34" : "#ffffff"};
