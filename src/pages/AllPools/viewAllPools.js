@@ -50,9 +50,9 @@ const ViewAllPools = ({ darkMode, landingContainerWidth, navJustify }) => {
                 Launchpad Platform
               </span>
             </Typing>
-            <div className="relative z-10 inline-block p-px bg-gradient-to-tl from-orange-500 to-orange-300 mt-8">
+            <div className="relative z-10 inline-block p-px bg-gradient-to-tl from-orange-500 to-orange-300 mt-8 rounded-full overflow-hidden">
               <a
-                className="relative z-10 text-white bg-darkMode-600 inline-block font-medium leading-none py-3 px-9"
+                className="rounded-full relative z-10 text-white bg-darkMode-600 inline-block font-medium leading-none py-3 px-9"
                 href="#"
               >
                 Get started

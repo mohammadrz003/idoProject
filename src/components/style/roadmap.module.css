@@ -15,7 +15,7 @@
 
 .timeLineUL li:nth-child(1)::before {
   display: inline-block;
-  content: "Platform Launching";
+  content: "Planing & Development ";
   position: absolute;
   top: -45px;
   left: 0;
@@ -43,7 +43,7 @@
 
 .timeLineUL li:nth-child(2)::before {
   display: inline-block;
-  content: "Partnership Programm";
+  content: "Project Launching";
   position: absolute;
   top: -45px;
   left: 0;
@@ -71,7 +71,7 @@
 
 .timeLineUL li:nth-child(3)::before {
   display: inline-block;
-  content: "Staking Platform Start";
+  content: "Insurance Development & Planning";
   position: absolute;
   top: -45px;
   left: 0;
@@ -127,7 +127,7 @@
 
 .timeLineUL li:nth-child(5)::before {
   display: inline-block;
-  content: "Staking Platform Launch ";
+  content: " Testing Insurance Platform";
   position: absolute;
   top: -45px;
   left: 0;

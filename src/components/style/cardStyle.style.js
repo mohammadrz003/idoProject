@@ -16,9 +16,9 @@ export const PoolTitle = styled.h2`
   }
 `;
 
-export const ProgressFire = styled.svg`
-  transform: translate(-55%, -37%);
-  width: 50px;
+export const ProgressFire = styled.img`
+  transform: translate(-55%, -32%) rotate(90deg);
+  width: 16px;
 `;
 
 export const ProgressPercent = styled.span`
