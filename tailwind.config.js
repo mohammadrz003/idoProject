@@ -54,6 +54,9 @@ module.exports = {
       },
       minWidth: {
         xxl: '1400px',
+      },
+      spacing: {
+        '86': '21.5rem',
       }
     },
   },

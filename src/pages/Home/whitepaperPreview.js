@@ -27,7 +27,7 @@ const WhitepaperPreview = ({ useDarkMode }) => {
   };
 
   return (
-    <WhitePaperWrapper className="dark:bg-darkMode-600 dark:text-white text-center py-16">
+    <WhitePaperWrapper className="dark:bg-darkMode-800 dark:text-white text-center py-16">
       <PoolTitle
         useDarkMode={useDarkMode}
         className={`dark:text-white leading-none relative inline-block text-center font-bold text-secondery-300 text-3xl`}

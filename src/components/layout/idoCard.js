@@ -2,6 +2,7 @@ import React from "react";
 import { PoolTitle } from "../style/cardStyle.style";
 import styled from "styled-components";
 import MobileProgressBar from "./homeProgressbar/mobile-progressBar";
+import { mediaQueries } from "../../mediaQueries";
 
 export const HomeIdoHeaderPercent = styled.p`
   background: rgb(14, 210, 247);
@@ -11,6 +12,14 @@ export const HomeIdoHeaderPercent = styled.p`
   -webkit-text-fill-color: transparent;
 `;
 
+const IdoItem = styled.div`
+  width: 100%;
+
+  ${mediaQueries("lg")`
+    width: calc(33.33% - 32px);
+  `}
+`;
+
 const IdoCard = ({ useDarkMode }) => {
   let progress = "70";
   let { sale, total } = {
@@ -18,11 +27,11 @@ const IdoCard = ({ useDarkMode }) => {
     total: "68000",
   };
 
-  let idoCartItem = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  let idoCartItem = [1, 2, 3, 4, 5, 6];
 
   return (
     <div className="bg-gray-100 dark:bg-darkMode-600">
-      <div className="container mx-auto py-24 xl:px-20 md:px-7 lg:py-28 flex flex-col">
+      <div className="container mx-auto py-24 xl:px-20 md:px-7 lg:py-24 flex flex-col">
         <div className="text-center">
           <PoolTitle
             useDarkMode={useDarkMode}
@@ -31,12 +40,12 @@ const IdoCard = ({ useDarkMode }) => {
             <span className="relative z-10">Featured Pools</span>
           </PoolTitle>
         </div>
-        <section className="mt-14 grid px-4 gap-y-8 lg:grid-cols-3 lg:gap-11 md:grid-cols-2 md:gap-9 sm:grid-cols-1 sm:gap-y-12 sm:px-6">
+        <section className="mt-14 -m-4 flex flex-col flex-wrap md:flex-row md:justify-center px-4 sm:px-6">
           {/* card items go here */}
           {idoCartItem.map((item) => {
             return (
-              <div
-                className={`bg-white transform lg:hover:scale-105 duration-300 rounded-3xl p-6 cursor-pointer border border-gray-300 dark:bg-darkMode-800 dark:border-gray-700 dark:hover:border-yellow-300 hover:border-primary-300`}
+              <IdoItem
+                className={`lg:m-4 bg-white transform lg:hover:scale-105 duration-300 rounded-3xl p-6 cursor-pointer border border-gray-300 dark:bg-darkMode-800 dark:border-gray-700 dark:hover:border-yellow-300 hover:border-primary-300`}
               >
                 <div className="flex justify-between items-center">
                   <MobileProgressBar
@@ -94,7 +103,7 @@ const IdoCard = ({ useDarkMode }) => {
                     </span>
                   </p>
                 </div>
-              </div>
+              </IdoItem>
             );
           })}
         </section>
