@@ -32,9 +32,9 @@ const Partners = () => {
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
         >
-          {PartnerList.map((item) => {
+          {PartnerList.map((item, index) => {
             return (
-              <SwiperSlide className="flex items-center cursor-pointer rounded-xl xl:px-3">
+              <SwiperSlide key={index} className="flex items-center cursor-pointer rounded-xl xl:px-3">
                 {item}
               </SwiperSlide>
             );

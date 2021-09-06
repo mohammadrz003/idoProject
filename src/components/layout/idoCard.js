@@ -42,9 +42,10 @@ const IdoCard = ({ useDarkMode }) => {
         </div>
         <section className="mt-14 md:-m-4 space-y-8 md:space-y-0 flex flex-col flex-wrap md:flex-row md:justify-center px-4 sm:px-6">
           {/* card items go here */}
-          {idoCartItem.map((item) => {
+          {idoCartItem.map((item, index) => {
             return (
               <IdoItem
+                key={index}
                 className={`lg:m-4 bg-white transform lg:hover:scale-105 duration-300 rounded-3xl p-6 cursor-pointer border border-gray-300 dark:bg-darkMode-800 dark:border-gray-700 dark:hover:border-yellow-300 hover:border-primary-300`}
               >
                 <div className="flex justify-between items-center">
