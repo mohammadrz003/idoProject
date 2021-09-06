@@ -40,7 +40,7 @@ const IdoCard = ({ useDarkMode }) => {
             <span className="relative z-10">Featured Pools</span>
           </PoolTitle>
         </div>
-        <section className="mt-14 -m-4 flex flex-col flex-wrap md:flex-row md:justify-center px-4 sm:px-6">
+        <section className="mt-14 md:-m-4 space-y-8 md:space-y-0 flex flex-col flex-wrap md:flex-row md:justify-center px-4 sm:px-6">
           {/* card items go here */}
           {idoCartItem.map((item) => {
             return (

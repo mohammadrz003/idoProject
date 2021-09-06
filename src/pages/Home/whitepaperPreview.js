@@ -6,16 +6,16 @@ import {
 } from "./style/whitePaper.style";
 import Classes from "./style/whitePaper.module.css";
 import { PoolTitle } from "../../components/style/cardStyle.style";
-import img1 from "../../img/whitepaper/img1.jpg";
-import img2 from "../../img/whitepaper/img2.jpg";
-import img3 from "../../img/whitepaper/img3.jpg";
+import img1 from "../../img/whitepaper/img5.png";
+import img2 from "../../img/whitepaper/img6.png";
+import img3 from "../../img/whitepaper/img4.png";
 import { useState } from "react/cjs/react.development";
 
 const WhitepaperPreview = ({ useDarkMode }) => {
   const imageList = [
-    { id: 1, imgSrc: img1 },
-    { id: 2, imgSrc: img2 },
-    { id: 3, imgSrc: img3 },
+    { id: 1, imgSrc: img1, title: "FRONT PAGE" },
+    { id: 2, imgSrc: img2, title: "TABLE OF CONTENTS" },
+    { id: 3, imgSrc: img3, title: "TOKENOMICS" },
   ];
 
   const [model, setModel] = useState(false);
@@ -57,7 +57,7 @@ const WhitepaperPreview = ({ useDarkMode }) => {
         </svg>
       </div>
       <div className="container mx-auto mt-16">
-        <PaperImageBox className="px-4 xl:px-20 space-y-8 lg:space-y-0 lg:space-x-12">
+        <PaperImageBox className="px-4 xl:px-20 space-y-10 lg:space-y-0 lg:space-x-12">
           {imageList.map((item) => {
             return (
               <PaperItem
@@ -90,7 +90,7 @@ const WhitepaperPreview = ({ useDarkMode }) => {
                   src={item.imgSrc}
                   alt=""
                 />
-                <PaperItemTitle>Lorem Ipsum</PaperItemTitle>
+                <PaperItemTitle>{item.title}</PaperItemTitle>
               </PaperItem>
             );
           })}
