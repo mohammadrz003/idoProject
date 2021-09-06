@@ -3,7 +3,7 @@ import mobileRoadCSS from '../../components/style/mobileRoadmap.module.css';
 
 const MobileRoadmap = () => {
   return (
-    <div className="bg-secondery-400 sm:hidden">
+    <div className="bg-secondery-400 dark:bg-darkMode-800 sm:hidden">
       <div className="container mx-auto px-4">
         <div className="pl-4 py-12">
           <div className={`${mobileRoadCSS.timelineBox} relative border-l-2 border-secondery-100 pl-8 pb-8`}>
