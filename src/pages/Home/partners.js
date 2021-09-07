@@ -13,7 +13,7 @@ const Partners = () => {
     cursor: pointer;
     border-radius: 7px;
     padding: 0 0;
-    height: 100%;
+    height: 54px;
 
     ${mediaQueries("xl")`
       padding: 0 10px;
@@ -45,7 +45,7 @@ const Partners = () => {
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
         >
-          <SwiperSlide>
+          <SwiperSlide style={{height: "100%", minHeight: "54px"}}>
             <SwiperSlideBox>
               <svg
                 viewBox="0 0 749 164"
@@ -67,7 +67,7 @@ const Partners = () => {
               </svg>
             </SwiperSlideBox>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide style={{height: "100%", minHeight: "54px"}}>
             <SwiperSlideBox>
               <svg
                 viewBox="0 0 63 20"
@@ -82,7 +82,7 @@ const Partners = () => {
               </svg>
             </SwiperSlideBox>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide style={{height: "100%", minHeight: "54px"}}>
             <SwiperSlideBox>
               <svg
                 viewBox="0 0 652 161.8"
@@ -99,7 +99,7 @@ const Partners = () => {
               </svg>
             </SwiperSlideBox>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide style={{height: "100%", minHeight: "54px"}}>
             <SwiperSlideBox>
               <svg
                 viewBox="0 0 486.667 151.88"
@@ -112,7 +112,7 @@ const Partners = () => {
               </svg>
             </SwiperSlideBox>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide style={{height: "100%", minHeight: "54px"}}>
             <SwiperSlideBox>
               <svg
                 viewBox="0 0 1911 400"
@@ -128,7 +128,7 @@ const Partners = () => {
               </svg>
             </SwiperSlideBox>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide style={{height: "100%", minHeight: "54px"}}>
             <SwiperSlideBox>
               <svg
                 viewBox="0 0 749 164"
@@ -150,7 +150,7 @@ const Partners = () => {
               </svg>
             </SwiperSlideBox>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide style={{height: "100%", minHeight: "54px"}}>
             <SwiperSlideBox>
               <svg
                 viewBox="0 0 63 20"
