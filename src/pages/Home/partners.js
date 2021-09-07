@@ -34,7 +34,7 @@ const Partners = () => {
         >
           {PartnerList.map((item, index) => {
             return (
-              <SwiperSlide key={index} className="flex items-center cursor-pointer rounded-xl xl:px-3">
+              <SwiperSlide key={index} className="flex content-center cursor-pointer rounded-xl xl:px-3">
                 {item}
               </SwiperSlide>
             );
