@@ -22,15 +22,30 @@ export const PaperItem = styled.div`
   position: relative;
   cursor: pointer;
   transition: all 300ms ease;
+  margin-bottom: 2rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   ${mediaQueries("md")`
     width: calc(50% - 30px);
+    margin-bottom: 0;
     margin: 15px 15px;
+
+    &:last-child {
+    margin-bottom: 15px;
+  }
   `}
 
   ${mediaQueries("lg")`
     width: calc(33.33% - 30px);
+    margin-bottom: 0;
     margin: 15px 15px;
+
+    &:last-child {
+    margin-bottom: 15px;
+  }
   `}
 
   &::before {

@@ -15,6 +15,10 @@ export const HomeIdoHeaderPercent = styled.p`
 const IdoItem = styled.div`
   width: 100%;
 
+  ${mediaQueries("md")`
+    width: calc(50% - 16px);
+  `}
+
   ${mediaQueries("lg")`
     width: calc(33.33% - 32px);
   `}
@@ -46,7 +50,7 @@ const IdoCard = ({ useDarkMode }) => {
             return (
               <IdoItem
                 key={index}
-                className={`mb-8 lg:m-4 bg-white transform lg:hover:scale-105 duration-300 rounded-3xl p-6 cursor-pointer border border-gray-300 dark:bg-darkMode-800 dark:border-gray-700 dark:hover:border-yellow-300 hover:border-primary-300`}
+                className={`mb-8 md:m-2 lg:m-4 bg-white transform lg:hover:scale-105 duration-300 rounded-3xl p-6 cursor-pointer border border-gray-300 dark:bg-darkMode-800 dark:border-gray-700 dark:hover:border-yellow-300 hover:border-primary-300`}
               >
                 <div className="flex justify-between items-center">
                   <MobileProgressBar
