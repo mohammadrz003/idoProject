@@ -58,12 +58,12 @@ const WhitepaperPreview = ({ useDarkMode }) => {
           </svg>
         </div>
         <div className="container mx-auto mt-16">
-          <PaperImageBox className="px-4 xl:px-20 space-y-10 lg:space-y-0 lg:space-x-12">
+          <PaperImageBox className="px-4 xl:px-20">
             {imageList.map((item) => {
               return (
                 <PaperItem
                   key={item.id}
-                  className="w-full lg:w-1/3 rounded-2xl"
+                  className="rounded-2xl"
                   onClick={() => getImg(item.imgSrc)}
                 >
                   <svg

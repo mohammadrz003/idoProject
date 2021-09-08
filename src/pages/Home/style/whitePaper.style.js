@@ -8,17 +8,30 @@ export const PaperImageBox = styled.div`
   flex-direction: column;
   align-content: center;
 
-  ${mediaQueries("lg")`
+  ${mediaQueries("md")`
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   `}
 `;
 
 export const PaperItem = styled.div`
+  width: 100%;
   height: 280px;
   overflow: hidden;
   position: relative;
   cursor: pointer;
   transition: all 300ms ease;
+
+  ${mediaQueries("md")`
+    width: calc(50% - 30px);
+    margin: 15px 15px;
+  `}
+
+  ${mediaQueries("lg")`
+    width: calc(33.33% - 30px);
+    margin: 15px 15px;
+  `}
 
   &::before {
     content: "";
