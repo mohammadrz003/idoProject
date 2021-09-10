@@ -61,7 +61,7 @@ const PoolsDetail = ({ darkMode, navigation }) => {
                   display={"inline-block"}
                 />
                 <h2 className="font-semibold mt-4 text-2xl text-gray-900 dark:text-white">
-                  Royale Finance
+                  BullToken
                 </h2>
                 <PhoneIdoHeader
                   className="self-center text-white mt-1.5 font-bold text-lg"

@@ -17,7 +17,7 @@ const PoolsList = (props) => {
     Ongoing: [
       {
         id: 1,
-        title: "Dotmoovs BNB",
+        title: "BullToken",
         img: "image/coins/ethermoon.jpg",
         progress: 75,
         date: "5h ago",
@@ -26,7 +26,7 @@ const PoolsList = (props) => {
       },
       {
         id: 2,
-        title: "Royale Finance",
+        title: "BullToken",
         img: "image/coins/realfevr.jpg",
         progress: 65,
         date: "2h ago",
@@ -35,7 +35,7 @@ const PoolsList = (props) => {
       },
       {
         id: 1,
-        title: "Dotmoovs BNB",
+        title: "BullToken",
         img: "image/coins/ethermoon.jpg",
         progress: 21,
         date: "5h ago",
@@ -44,7 +44,7 @@ const PoolsList = (props) => {
       },
       {
         id: 2,
-        title: "Royale Finance",
+        title: "BullToken",
         img: "image/coins/realfevr.jpg",
         progress: 92,
         date: "2h ago",
@@ -53,45 +53,18 @@ const PoolsList = (props) => {
       },
       {
         id: 1,
-        title: "Dotmoovs BNB",
+        title: "BullToken",
         img: "image/coins/ethermoon.jpg",
         progress: 56,
         date: "5h ago",
         commentCount: 5,
         shareCount: 2,
       },
-      {
-        id: 2,
-        title: "Royale Finance",
-        img: "image/coins/realfevr.jpg",
-        progress: 10,
-        date: "2h ago",
-        commentCount: 3,
-        shareCount: 2,
-      },
-      {
-        id: 1,
-        title: "Dotmoovs BNB",
-        img: "image/coins/ethermoon.jpg",
-        progress: 83,
-        date: "5h ago",
-        commentCount: 5,
-        shareCount: 2,
-      },
-      {
-        id: 2,
-        title: "Royale Finance",
-        img: "image/coins/realfevr.jpg",
-        progress: 90,
-        date: "2h ago",
-        commentCount: 3,
-        shareCount: 2,
-      },
     ],
     Future: [
       {
         id: 1,
-        title: "Dotmoovs BNB",
+        title: "BullToken",
         img: "image/coins/ethermoon.jpg",
         progress: 75,
         date: "5h ago",
@@ -100,7 +73,7 @@ const PoolsList = (props) => {
       },
       {
         id: 2,
-        title: "Royale Finance",
+        title: "BullToken",
         img: "image/coins/realfevr.jpg",
         progress: 65,
         date: "2h ago",
@@ -111,7 +84,7 @@ const PoolsList = (props) => {
     Ended: [
       {
         id: 1,
-        title: "Dotmoovs BNB",
+        title: "BullToken",
         img: "image/coins/ethermoon.jpg",
         progress: 75,
         date: "5h ago",
@@ -120,7 +93,7 @@ const PoolsList = (props) => {
       },
       {
         id: 2,
-        title: "Royale Finance",
+        title: "BullToken",
         img: "image/coins/realfevr.jpg",
         progress: 65,
         date: "2h ago",
@@ -129,7 +102,7 @@ const PoolsList = (props) => {
       },
       {
         id: 1,
-        title: "Dotmoovs BNB",
+        title: "BullToken",
         img: "image/coins/ethermoon.jpg",
         progress: 75,
         date: "5h ago",
