@@ -17,7 +17,7 @@ const PoolsList = (props) => {
     Ongoing: [
       {
         id: 1,
-        title: "BullToken",
+        title: "Bulllaunchpad",
         img: "image/coins/ethermoon.jpg",
         progress: 75,
         date: "5h ago",
@@ -26,7 +26,7 @@ const PoolsList = (props) => {
       },
       {
         id: 2,
-        title: "BullToken",
+        title: "Bulllaunchpad",
         img: "image/coins/realfevr.jpg",
         progress: 65,
         date: "2h ago",
@@ -35,7 +35,7 @@ const PoolsList = (props) => {
       },
       {
         id: 1,
-        title: "BullToken",
+        title: "Bulllaunchpad",
         img: "image/coins/ethermoon.jpg",
         progress: 21,
         date: "5h ago",
@@ -44,7 +44,7 @@ const PoolsList = (props) => {
       },
       {
         id: 2,
-        title: "BullToken",
+        title: "Bulllaunchpad",
         img: "image/coins/realfevr.jpg",
         progress: 92,
         date: "2h ago",
@@ -53,7 +53,7 @@ const PoolsList = (props) => {
       },
       {
         id: 1,
-        title: "BullToken",
+        title: "Bulllaunchpad",
         img: "image/coins/ethermoon.jpg",
         progress: 56,
         date: "5h ago",
@@ -64,7 +64,7 @@ const PoolsList = (props) => {
     Future: [
       {
         id: 1,
-        title: "BullToken",
+        title: "Bulllaunchpad",
         img: "image/coins/ethermoon.jpg",
         progress: 75,
         date: "5h ago",
@@ -73,7 +73,7 @@ const PoolsList = (props) => {
       },
       {
         id: 2,
-        title: "BullToken",
+        title: "Bulllaunchpad",
         img: "image/coins/realfevr.jpg",
         progress: 65,
         date: "2h ago",
@@ -84,7 +84,7 @@ const PoolsList = (props) => {
     Ended: [
       {
         id: 1,
-        title: "BullToken",
+        title: "Bulllaunchpad",
         img: "image/coins/ethermoon.jpg",
         progress: 75,
         date: "5h ago",
@@ -93,7 +93,7 @@ const PoolsList = (props) => {
       },
       {
         id: 2,
-        title: "BullToken",
+        title: "Bulllaunchpad",
         img: "image/coins/realfevr.jpg",
         progress: 65,
         date: "2h ago",
@@ -102,7 +102,7 @@ const PoolsList = (props) => {
       },
       {
         id: 1,
-        title: "BullToken",
+        title: "Bulllaunchpad",
         img: "image/coins/ethermoon.jpg",
         progress: 75,
         date: "5h ago",

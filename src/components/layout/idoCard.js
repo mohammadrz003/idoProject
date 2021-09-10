@@ -67,7 +67,7 @@ const IdoCard = ({ useDarkMode }) => {
                   </div>
                 </div>
                 <p className="font-semibold text-secondery-300 dark:text-darkMode-100 mt-2 text-2xl mb-0.5">
-                  BullToken
+                  Bulllaunchpad
                 </p>
                 <HomeIdoHeaderPercent
                   className="self-center text-white mt-1.5 font-bold text-lg"
