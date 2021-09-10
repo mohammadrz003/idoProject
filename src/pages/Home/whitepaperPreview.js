@@ -57,8 +57,8 @@ const WhitepaperPreview = ({ useDarkMode }) => {
             />
           </svg>
         </div>
-        <div className="container mx-auto mt-16">
-          <PaperImageBox className="px-4 xl:px-20">
+        <div className="container mx-auto mt-16 px-4 xl:px-20">
+          <PaperImageBox>
             {imageList.map((item) => {
               return (
                 <PaperItem
@@ -96,6 +96,28 @@ const WhitepaperPreview = ({ useDarkMode }) => {
               );
             })}
           </PaperImageBox>
+          <a
+            style={{ color: "#29BB89" }}
+            className="rounded-lg px-4 py-2 underline block font-semibold text-lg mt-8 lg:mt-4"
+            href="https://drive.google.com/file/d/1OiXsW_e0ZlPZn6qaX-r9EMXaqQqFW7E6/view?usp=sharing"
+            target="_blank"
+          >
+            See Whitepaper{" "}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 inline-block"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.8"
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
+            </svg>
+          </a>
         </div>
       </WhitePaperWrapper>
     </>
