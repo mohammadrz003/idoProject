@@ -6,6 +6,7 @@ import { useDarkModes } from "./components/layout/useDarkMode";
 import HomeLayout from "./pageLayout/HomeLayout";
 import AllPoolsLayout from "./pageLayout/AllPoolsLayout";
 import PoolsDetailLayout from "./pageLayout/PoolsDetailLayout";
+import Whitepaper from "./pages/Whitepaper";
 
 function App() {
   const [useDarkMode, toggleTheme] = useDarkModes();
@@ -22,7 +23,9 @@ function App() {
             path={"/pools"}
             component={() => <AllPoolsLayout darkMode={useDarkMode} />}
           />
+          <Route path={"/whitepaper"} component={Whitepaper} />
           <Route
+            exact
             path={"/"}
             component={() => <HomeLayout useDarkMode={useDarkMode} />}
           />

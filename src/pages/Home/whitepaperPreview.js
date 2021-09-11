@@ -5,6 +5,7 @@ import {
   PaperItemTitle,
   WhitePaperWrapper,
 } from "./style/whitePaper.style";
+import { Link } from "react-router-dom";
 import Classes from "./style/whitePaper.module.css";
 import { PoolTitle } from "../../components/style/cardStyle.style";
 import img1 from "../../img/whitepaper/img5.png";
@@ -96,11 +97,10 @@ const WhitepaperPreview = ({ useDarkMode }) => {
               );
             })}
           </PaperImageBox>
-          <a
+          <Link
+            to="/whitepaper"
             style={{ color: "#29BB89" }}
             className="rounded-lg px-4 py-2 underline block font-semibold text-lg mt-8 lg:mt-4"
-            href="https://drive.google.com/file/d/1OiXsW_e0ZlPZn6qaX-r9EMXaqQqFW7E6/view?usp=sharing"
-            target="_blank"
           >
             See Whitepaper{" "}
             <svg
@@ -117,7 +117,7 @@ const WhitepaperPreview = ({ useDarkMode }) => {
                 d="M13 7l5 5m0 0l-5 5m5-5H6"
               />
             </svg>
-          </a>
+          </Link>
         </div>
       </WhitePaperWrapper>
     </>
