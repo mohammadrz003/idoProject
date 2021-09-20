@@ -21,7 +21,8 @@ const Partners = () => {
   `;
 
   return (
-    <div className="dark:bg-darkMode-800 dark:text-white text-center pt-12 pb-24">
+    <div className="dark:bg-darkMode-800 dark:text-white text-center py-20">
+      <h4 className="text-center pb-16 text-secondery-300 dark:text-white dark:text-opacity-90 text-3xl font-bold">Partners</h4>
       <div className="container mx-auto px-7 xl:px-28">
         <Swiper
           spaceBetween={25}

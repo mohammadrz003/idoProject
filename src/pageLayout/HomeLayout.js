@@ -18,7 +18,6 @@ const HomeLayout = ({ useDarkMode, toggleTheme }) => {
         <MobileRoadmap />
         <Roadmap />
         <IdoCard useDarkMode={useDarkMode} />
-        <WhitepaperPreview useDarkMode={useDarkMode} />
         <Partners />
       </main>
     </>

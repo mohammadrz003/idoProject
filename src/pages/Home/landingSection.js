@@ -8,7 +8,7 @@ import rocketImg from "../../img/rocket-launchpad.jpg";
 import NavBar from "../../components/layout/navBar";
 
 const navigation = [
-  { name: "Product", href: "#" },
+  { name: "Whitepaper", href: "/whitepaper" },
   { name: "Features", href: "#" },
   { name: "Marketplace", href: "#" },
   { name: "Company", href: "#" },
