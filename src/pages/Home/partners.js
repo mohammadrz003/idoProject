@@ -50,14 +50,14 @@ const Partners = () => {
         >
           <SwiperSlide style={{ height: "100%", minHeight: "54px" }}>
             <SwiperSlideBox>
-              <a href="https://giftedhands.io/">
+              <a href="https://giftedhands.io/" target="_blank">
                 <img src="image/partners/giftedhands.png" alt="" />
               </a>
             </SwiperSlideBox>
           </SwiperSlide>
           <SwiperSlide style={{ height: "100%", minHeight: "54px" }}>
             <SwiperSlideBox>
-              <a href="https://www.certik.org/">
+              <a href="https://www.certik.org/" target="_blank">
                 <img src="image/partners/certik.png" alt="" />
               </a>
             </SwiperSlideBox>
