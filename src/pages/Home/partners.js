@@ -25,17 +25,18 @@ const Partners = () => {
       <h4 className="text-center pb-16 text-secondery-300 dark:text-white dark:text-opacity-90 text-3xl font-bold">Partners</h4>
       <div className="container mx-auto px-7 xl:px-28">
         <Swiper
+          style={{maxWidth: "400px"}}
           spaceBetween={25}
           slidesPerView={2}
           breakpoints={{
             // when window width is >= 640px
             640: {
-              slidesPerView: 4,
+              slidesPerView: 2,
             },
             // when window width is >= 768px
             768: {
-              spaceBetween: 35,
-              slidesPerView: 5,
+              spaceBetween: 25,
+              slidesPerView: 2,
             },
           }}
           loop={true}
@@ -43,42 +44,17 @@ const Partners = () => {
             delay: 1200,
             disableOnInteraction: false,
           }}
-          onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
         >
+          
           <SwiperSlide style={{height: "100%", minHeight: "54px"}}>
             <SwiperSlideBox>
-              <img src="image/partners/part1.png" alt="" />
+            <img src="image/partners/giftedhands.png" alt="" />
             </SwiperSlideBox>
           </SwiperSlide>
           <SwiperSlide style={{height: "100%", minHeight: "54px"}}>
             <SwiperSlideBox>
-            <img src="image/partners/part2.png" alt="" />
-            </SwiperSlideBox>
-          </SwiperSlide>
-          <SwiperSlide style={{height: "100%", minHeight: "54px"}}>
-            <SwiperSlideBox>
-            <img src="image/partners/part3.png" alt="" />
-            </SwiperSlideBox>
-          </SwiperSlide>
-          <SwiperSlide style={{height: "100%", minHeight: "54px"}}>
-            <SwiperSlideBox>
-            <img src="image/partners/part4.png" alt="" />
-            </SwiperSlideBox>
-          </SwiperSlide>
-          <SwiperSlide style={{height: "100%", minHeight: "54px"}}>
-            <SwiperSlideBox>
-            <img src="image/partners/part5.png" alt="" />
-            </SwiperSlideBox>
-          </SwiperSlide>
-          <SwiperSlide style={{height: "100%", minHeight: "54px"}}>
-            <SwiperSlideBox>
-            <img src="image/partners/part1.png" alt="" />
-            </SwiperSlideBox>
-          </SwiperSlide>
-          <SwiperSlide style={{height: "100%", minHeight: "54px"}}>
-            <SwiperSlideBox>
-            <img src="image/partners/part2.png" alt="" />
+            <img src="image/partners/certik.png" alt="" />
             </SwiperSlideBox>
           </SwiperSlide>
         </Swiper>
